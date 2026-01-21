@@ -2,7 +2,7 @@
   "items": [
     {
       "src": "Galeria1.jpg",
-      "alt": "Wnętrze Aroma Gold Spa",
+      "alt": "Wnętrze Aroma Gold Spa – strefa relaksu",
       "title": "Wnętrze SPA",
       "subtitle": "Strefa relaksu i wyciszenia"
     },
@@ -14,12 +14,28 @@
     },
     {
       "src": "Galeria3.jpg",
-      "alt": "Kosmetyki Thalgo",
-      "title": "Kosmetyki Thalgo",
-      "subtitle": "Profesjonalna pielęgnacja, na której pracujemy"
+      "alt": "Kosmetyki, na których pracujemy",
+      "title": "Kosmetyki",
+      "subtitle": "Profesjonalna pielęgnacja"
+    },
+
+    {
+      "src": "Galeria4.jpg",
+      "alt": "Gabinet kosmetyczny w Aroma Gold Spa, Wisła",
+      "title": "Gabinet kosmetyczny",
+      "subtitle": "Komfort i intymność zabiegów"
+    },
+    {
+      "src": "Galeria5.jpg",
+      "alt": "Gabinet masażu w Aroma Gold Spa, Wisła",
+      "title": "Gabinet masażu",
+      "subtitle": "Relaks i odprężenie"
+    },
+    {
+      "src": "Galeria6.jpg",
+      "alt": "Biooleo Cosmetics – kosmetyki używane w Aroma Gold Spa",
+      "title": "Biooleo Cosmetics",
+      "subtitle": "Wyselekcjonowane produkty"
     }
   ]
 }
-
-
-
