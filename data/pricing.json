@@ -1,0 +1,191 @@
+{
+  "items": [
+    {
+      "category": "face",
+      "name": "Masaż twarzy KOBIDO",
+      "duration": "70 min",
+      "price": "270 zł",
+      "description": "Japoński rytuał liftingująco-pielęgnacyjny obejmujący twarz, szyję, dekolt, ramiona i głowę."
+    },
+    {
+      "category": "face",
+      "name": "GOLD ENERGY SNAIL SYNERGY DELUX",
+      "duration": "75 min",
+      "price": "350 zł",
+      "description": "Zabieg z 24-karatowym złotem i śluzem ze ślimaka o silnym działaniu nawilżającym, wybielającym i przeciwstarzeniowym. Przed zabiegiem wykonywany jest detox podnoszący temperaturę skóry."
+    },
+    {
+      "category": "face",
+      "name": "GOLD ENERGY SNAIL SYNERGY",
+      "duration": "55 min",
+      "price": "300 zł",
+      "description": "Intensywny zabieg z 24-karatowym złotem i śluzem ze ślimaka – nawilżenie, rozjaśnienie i działanie anti-aging."
+    },
+    {
+      "category": "face",
+      "name": "Zabieg liftingujący z peptydami",
+      "duration": "55 min",
+      "price": "270 zł",
+      "description": "Zabieg na bazie kompleksu peptydów, stymulujący odmłodzenie skóry dzięki technologii Osmocell."
+    },
+    {
+      "category": "face",
+      "name": "Rytuał Cold Cream Marine",
+      "duration": "55 min",
+      "price": "250 zł",
+      "description": "Morski rytuał odżywczo-regenerujący dla skóry suchej, wrażliwej i odwodnionej."
+    },
+    {
+      "category": "face",
+      "name": "Zabieg podstawowy",
+      "duration": "55 min",
+      "price": "230 zł",
+      "description": "Podstawowa pielęgnacja twarzy poprawiająca ogólną kondycję skóry."
+    },
+    {
+      "category": "face",
+      "name": "Peeling kawitacyjny (dodatek)",
+      "duration": "",
+      "price": "30 zł",
+      "description": "Dodatek do zabiegu na twarz."
+    },
+
+    {
+      "category": "brows",
+      "name": "Henna pudrowa brwi + geometria + regulacja",
+      "duration": "60 min",
+      "price": "100 zł",
+      "description": ""
+    },
+    {
+      "category": "brows",
+      "name": "Laminacja brwi + geometria + regulacja + farbka",
+      "duration": "90 min",
+      "price": "150 zł",
+      "description": ""
+    },
+    {
+      "category": "brows",
+      "name": "Henna brwi",
+      "duration": "30 min",
+      "price": "50 zł",
+      "description": ""
+    },
+    {
+      "category": "brows",
+      "name": "Henna rzęs",
+      "duration": "30 min",
+      "price": "30 zł",
+      "description": ""
+    },
+
+    {
+      "category": "handsfeet",
+      "name": "Callux Peel Foot + parafina",
+      "duration": "50 / 80 min",
+      "price": "150 zł / 170 zł",
+      "description": "Zabieg kwasowy na stopy: żel kwasowy, usunięcie martwego naskórka, kąpiel w soli, polerowanie oraz intensywnie nawilżający krem."
+    },
+    {
+      "category": "handsfeet",
+      "name": "Parafina na dłonie lub stopy",
+      "duration": "30 min",
+      "price": "50 zł",
+      "description": ""
+    },
+
+    {
+      "category": "body",
+      "name": "Czekoladowa euforia",
+      "duration": "80 min",
+      "price": "300 zł",
+      "description": "Peeling, masaż gorącą czekoladą oraz olejek czekoladowy. Zabieg silnie relaksujący i regenerujący."
+    },
+    {
+      "category": "body",
+      "name": "Mleczna odnowa",
+      "duration": "80 min",
+      "price": "260 zł",
+      "description": "Peeling cukrowy, serum, maska i krem. Ukojenie dla skóry suchej i wrażliwej."
+    },
+    {
+      "category": "body",
+      "name": "Zabieg redukujący tkankę tłuszczową",
+      "duration": "55 min",
+      "price": "230 zł",
+      "description": "Peeling cukrowy oraz rozgrzewający żel błotny redukujący cellulit i poprawiający jędrność skóry."
+    },
+    {
+      "category": "body",
+      "name": "Peeling całego ciała",
+      "duration": "25 min",
+      "price": "100 zł",
+      "description": "Zabieg regenerujący, nawilżający i odżywczy dla całego ciała."
+    },
+
+    {
+      "category": "massage",
+      "name": "Masaż gorącymi kamieniami bazaltowymi",
+      "duration": "50 min",
+      "price": "250 zł",
+      "description": "Masaż leczniczy poprawiający krążenie, przepływ energii i głębokie odprężenie."
+    },
+    {
+      "category": "massage",
+      "name": "Masaż gorącą czekoladą",
+      "duration": "50 min",
+      "price": "240 zł",
+      "description": "Relaksacyjny masaż naturalną gorącą czekoladą."
+    },
+    {
+      "category": "massage",
+      "name": "Masaż na oleju arganowym",
+      "duration": "50 min",
+      "price": "230 zł",
+      "description": "Regenerujący masaż olejem arganowym – złoto Maroka."
+    },
+    {
+      "category": "massage",
+      "name": "Masaż olejem aromaterapeutycznym",
+      "duration": "50 min",
+      "price": "220 zł",
+      "description": "Masaż olejkami aromaterapeutycznymi redukujący stres i napięcie."
+    },
+    {
+      "category": "massage",
+      "name": "Masaż częściowy gorącymi kamieniami",
+      "duration": "25 min",
+      "price": "150 zł",
+      "description": "Częściowy masaż pleców rozluźniający mięśnie."
+    },
+    {
+      "category": "massage",
+      "name": "Masaż częściowy",
+      "duration": "25 min",
+      "price": "130 zł",
+      "description": "Masaż wybranej partii ciała."
+    },
+    {
+      "category": "massage",
+      "name": "Okład borowinowy",
+      "duration": "20 min",
+      "price": "50 zł",
+      "description": "Borowina nakładana na wybraną partię ciała – pomocna przy bólach stawów i kręgosłupa."
+    },
+
+    {
+      "category": "kids",
+      "name": "Kids SPA – Słodka czekolada",
+      "duration": "25 min",
+      "price": "130 zł",
+      "description": "Relaksacyjny masaż pleców dla dzieci."
+    },
+    {
+      "category": "kids",
+      "name": "Kids SPA – Soczysta pomarańcza",
+      "duration": "25 min",
+      "price": "130 zł",
+      "description": "Relaksacyjny masaż pleców dla dzieci."
+    }
+  ]
+}

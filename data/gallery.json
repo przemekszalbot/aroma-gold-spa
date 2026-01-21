@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "src": "Galeria1.jpg",
+      "alt": "Wnętrze Aroma Gold Spa",
+      "title": "Wnętrze SPA",
+      "subtitle": "Strefa relaksu i wyciszenia"
+    },
+    {
+      "src": "Galeria2.jpg",
+      "alt": "Założycielka Aroma Gold Spa i główna kosmetolog",
+      "title": "Założycielka i główna kosmetolog",
+      "subtitle": "Doświadczenie • pasja • indywidualne podejście"
+    },
+    {
+      "src": "Galeria3.jpg",
+      "alt": "Kosmetyki Thalgo",
+      "title": "Kosmetyki Thalgo",
+      "subtitle": "Profesjonalna pielęgnacja, na której pracujemy"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "Karolina K.",
+      "stars": 5,
+      "source": "Booksy",
+      "text": "Polecam, najmniej bolesna regulacja brwi w moim życiu :) piękny efekt końcowy, wyszłam zrelaksowana"
+    },
+    {
+      "name": "Monika P.",
+      "stars": 5,
+      "source": "Booksy",
+      "text": "Szczerze polecam! <3"
+    },
+    {
+      "name": "Anna S.",
+      "stars": 5,
+      "source": "Booksy",
+      "text": "Profesjonalna obsługa i miła atmosfera. Polecam <3"
+    },
+    {
+      "name": "Opinia anonimowa",
+      "stars": 5,
+      "source": "Booksy",
+      "text": "Przepięknie, starannie i w bardzo przyjemnej atmosferze."
+    }
+  ]
+}
+
