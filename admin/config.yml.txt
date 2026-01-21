@@ -1,0 +1,78 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Ustawienia strony"
+    files:
+      - file: "data/site.json"
+        label: "Dane kontaktowe, linki i opis"
+        name: "site"
+        fields:
+          - { label: "Nazwa", name: "name", widget: "string" }
+          - { label: "Adres", name: "address", widget: "string" }
+          - { label: "Godziny", name: "hours", widget: "string" }
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "E-mail", name: "email", widget: "string" }
+          - { label: "Booksy URL", name: "booksyUrl", widget: "string" }
+          - { label: "Booksy Opinie URL", name: "booksyReviewsUrl", widget: "string" }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string" }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string" }
+          - { label: "Nagłówek (Hero)", name: "heroTitle", widget: "string" }
+          - { label: "Opis – akapit 1", name: "heroText1", widget: "text" }
+          - { label: "Opis – akapit 2", name: "heroText2", widget: "text" }
+          - { label: "Opis – akapit 3", name: "heroText3", widget: "text" }
+
+  - name: "pricing"
+    label: "Cennik"
+    files:
+      - file: "data/pricing.json"
+        label: "Pozycje cennika"
+        name: "pricing"
+        fields:
+          - label: "Pozycje"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Kategoria", name: "category", widget: "select", options: ["face", "brows", "handsfeet", "body", "massage", "kids"] }
+              - { label: "Nazwa", name: "name", widget: "string" }
+              - { label: "Czas", name: "duration", widget: "string", required: false }
+              - { label: "Cena", name: "price", widget: "string" }
+              - { label: "Opis", name: "description", widget: "text", required: false }
+
+  - name: "reviews"
+    label: "Opinie (wyróżnione)"
+    files:
+      - file: "data/reviews.json"
+        label: "Opinie"
+        name: "reviews"
+        fields:
+          - label: "Opinie"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Imię / Inicjały", name: "name", widget: "string" }
+              - { label: "Gwiazdki", name: "stars", widget: "number", value_type: "int", min: 1, max: 5 }
+              - { label: "Źródło", name: "source", widget: "select", options: ["Booksy", "Facebook"] }
+              - { label: "Treść", name: "text", widget: "text" }
+
+  - name: "gallery"
+    label: "Galeria"
+    files:
+      - file: "data/gallery.json"
+        label: "Zdjęcia w galerii"
+        name: "gallery"
+        fields:
+          - label: "Zdjęcia"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Zdjęcie", name: "src", widget: "image" }
+              - { label: "ALT", name: "alt", widget: "string" }
+              - { label: "Tytuł", name: "title", widget: "string" }
+              - { label: "Podtytuł", name: "subtitle", widget: "string" }
