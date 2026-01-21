@@ -405,7 +405,129 @@
       color:var(--muted);
       background:rgba(255,255,255,.45);
     }
-  </style>
+  
+/* ===================== */
+/* MOBILE IMPROVEMENTS   */
+/* ===================== */
+
+/* małe udogodnienia dotyku */
+a, button { -webkit-tap-highlight-color: transparent; }
+.nav-links a, .btn, .chip, .tab-btn { min-height: 42px; }
+
+/* hamburger button */
+.nav-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(199,162,122,.45);
+  background:rgba(255,255,255,.75);
+  color:var(--text);
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 10px 22px rgba(59,43,37,.07);
+}
+.nav-toggle .bars{font-size:18px; line-height:1}
+
+/* tabela – przewijanie na mobile */
+.table-wrap{
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+  border-radius:var(--radius);
+}
+
+/* 980px i mniej – telefon/tablet */
+@media (max-width: 980px){
+  .container{padding:0 14px}
+
+  /* NAV */
+  .nav-inner{
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+  }
+  .brand img{width:56px;height:56px;border-radius:14px}
+  .brand .name span:first-child{font-size:15px}
+  .brand .name span:last-child{font-size:12px;margin-top:4px}
+
+  /* pokazujemy hamburger */
+  .nav-toggle{display:inline-flex}
+
+  /* menu jako panel (ukryte domyślnie) */
+  .nav-links{
+    width:100%;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    gap:8px;
+    padding:10px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:rgba(255,255,255,.75);
+    box-shadow:0 16px 36px rgba(59,43,37,.10);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{
+    width:100%;
+    justify-content:flex-start;
+    padding:12px 12px;
+    border-radius:14px;
+    background:rgba(255,255,255,.55);
+    border:1px solid rgba(59,43,37,.08);
+  }
+  .nav-links .nav-cta{justify-content:center}
+
+  /* HERO */
+  .hero{padding:28px 0 14px}
+  .hero-grid{grid-template-columns:1fr; gap:14px}
+  .hero-card{padding:18px}
+  .hero h1{font-size:32px; line-height:1.15}
+  .hero p{max-width:unset}
+
+  /* przyciski w hero na całą szerokość */
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .hero-actions .btn{width:100%}
+  .social{width:100%}
+  .social a{flex:1; justify-content:center}
+
+  /* SEKCJE */
+  .section{padding:18px 0}
+  .section-title h2{font-size:22px}
+
+  /* TABY */
+  .tabs{flex-direction:column}
+  .tab-btn{width:100%}
+
+  /* TOOLBAR w cenniku */
+  .toolbar{gap:12px}
+  .search{width:100%}
+
+  /* tabela cennika */
+  .pricing-wrap{overflow:auto; -webkit-overflow-scrolling:touch; border-radius:var(--radius);}
+  table{min-width:720px}
+  th,td{padding:12px}
+  .price{white-space:nowrap}
+
+  /* Kontakt */
+  .contact-grid{grid-template-columns:1fr}
+
+  /* MAP */
+  .map iframe{height:280px}
+}
+
+/* bardzo małe telefony */
+@media (max-width: 420px){
+  body{font-size:15px}
+  .hero h1{font-size:28px}
+}
+
+</style>
 </head>
 
 <body>
@@ -432,7 +554,12 @@
         </div>
       </div>
 
-      <nav class="nav-links" aria-label="Nawigacja">
+      
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteMenu" id="navToggle"><span class="bars">☰</span> Menu</button>
+
+
+      <nav class="nav-links" aria-label="Nawigacja" id="siteMenu">
         <a href="#opis">Opis</a>
         <a class="btn nav-cta" href="#uslugi">Oferta & Cennik</a>
         <a href="#galeria">Galeria</a>
@@ -656,6 +783,7 @@
           </div>
 
           <div class="pricing-wrap">
+            <div class="table-wrap">
             <table aria-label="Cennik zabiegów Aroma Gold Spa">
               <thead>
                 <tr>
@@ -883,7 +1011,36 @@
       tabCennik.setAttribute("aria-selected", String(!isOferta));
       panelOferta.hidden = !isOferta;
       panelCennik.hidden = isOferta;
-      document.getElementById("uslugi").scrollIntoView({ behavior: "smooth", block: "start" });
+      document.getElementById("uslugi").scrollIntoView({ behavior: "smooth", block: "start" 
+
+// --- Mobile nav (hamburger) ---
+(function(){
+  const navToggle = document.getElementById("navToggle");
+  const siteMenu = document.getElementById("siteMenu");
+  if(!navToggle || !siteMenu) return;
+
+  function closeMenu(){
+    siteMenu.classList.remove("open");
+    navToggle.setAttribute("aria-expanded","false");
+  }
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // zamykaj menu po kliknięciu linku kotwicy (na mobile)
+  siteMenu.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", closeMenu);
+  });
+
+  // zamykaj po zmianie rozmiaru (np. obrót ekranu)
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980) closeMenu();
+  });
+})();
+
+});
     }
 
     tabOferta.addEventListener("click", () => showTab("oferta"));
