@@ -27,6 +27,9 @@
 
     *{box-sizing:border-box}
     html,body{height:100%}
+    html,body{overflow-x:hidden}
+    *{min-width:0}
+    img,svg,iframe{max-width:100%}
     body{
       margin:0;
       font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -230,6 +233,8 @@
 
     /* PRICING */
     .pricing-wrap{display:grid;grid-template-columns:1fr;gap:12px}
+    .table-scroll{overflow:auto;-webkit-overflow-scrolling:touch;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,85)}
+    .table-scroll table{min-width:720px}
     .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:12px 0 10px}
     .chips{display:flex;gap:8px;flex-wrap:wrap}
     .chip{
@@ -405,74 +410,17 @@
       color:var(--muted);
       background:rgba(255,255,255,.45);
     }
-
-    /* =======================
-       MOBILE FIXES (TOP + NAV)
-       ======================= */
-    html, body{overflow-x:hidden}
-
-    .nav-toggle{
-      display:none;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid rgba(181,138,110,28);
-      background:rgba(255,255,255,72);
-      box-shadow:0 12px 26px rgba(59,43,37,10);
-      color:var(--text);
-      font-weight:900;
-      cursor:pointer;
-      transition:.15s ease;
-    }
-    .nav-toggle:hover{background:rgba(215,184,177,18);border-color:rgba(181,138,110,38)}
-    .nav-toggle .bars{font-size:18px;line-height:1}
-
-    /* wrapper dla tabeli (żeby na telefonie nie rozjeżdżała layoutu) */
-    .table-wrap{overflow:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)}
-    .table-wrap table{min-width:720px}
-
-    /* tabs zawsze klikalne (na wypadek nakładek) */
-    .tabs{position:relative;z-index:5}
-    .tab-btn{position:relative;z-index:6;pointer-events:auto}
-
-    @media (max-width: 900px){
-      .nav-inner{flex-wrap:wrap;gap:12px}
-      .nav-toggle{display:inline-flex}
-      .nav-links{
-        width:100%;
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-        gap:8px;
-        padding:10px;
-        border:1px solid var(--line);
-        border-radius:18px;
-        background:rgba(255,255,255,82);
-        box-shadow:0 18px 45px rgba(59,43,37,10);
-      }
-      .nav-links.open{display:flex}
-      .nav-links a{justify-content:flex-start}
-      .nav-links a.btn{justify-content:center}
-
-      /* HERO/INFO: żeby wszystko mieściło się na telefonie i nie robiło overflow */
-      .hero{padding:28px 0 18px}
-      .hero-card{padding:18px;border-radius:20px}
-      .info-card{padding:16px;border-radius:20px}
-
+  
+    /* MOBILE FIX: iPhone — początek strony bez "wyjeżdżania" */
+    @media (max-width: 520px){
+      .container{padding:0 14px}
+      .nav-inner{flex-wrap:wrap}
+      .brand{min-width:unset}
+      .nav-links{width:100%;justify-content:flex-start}
+      .btn{white-space:normal}
       .hero-actions{flex-direction:column;align-items:stretch}
       .hero-actions .btn{width:100%}
-      .social{width:100%}
-      .social a{width:100%;justify-content:center}
-
-      /* NAJWAŻNIEJSZE: pozwól przyciskom łamać tekst na mobile (przestaje „wypychać” stronę) */
-      .btn{white-space:normal}
-    }
-
-    @media (max-width: 420px){
-      .brand img{width:56px;height:56px}
-      .hero h1{letter-spacing:-.3px}
-      .review p{font-size:13px}
+      .note{overflow-wrap:anywhere;word-break:break-word}
     }
 
   </style>
@@ -495,18 +443,14 @@
   <header class="nav">
     <div class="container nav-inner">
       <div class="brand">
-        <img src="logo.png" alt="Aroma Gold Spa — logo" />
+        <img src="logo.png?v=20260121" alt="Aroma Gold Spa — logo" />
         <div class="name">
           <span>Aroma Gold Spa</span>
           <span>Wisła • ul. Dziechcinka 7</span>
         </div>
       </div>
 
-      <button class="nav-toggle" type="button" id="navToggle" aria-expanded="false" aria-controls="siteMenu">
-        <span class="bars">☰</span><span class="label">Menu</span>
-      </button>
-
-      <nav class="nav-links" id="siteMenu" aria-label="Nawigacja">
+      <nav class="nav-links" aria-label="Nawigacja">
         <a href="#opis">Opis</a>
         <a class="btn nav-cta" href="#uslugi">Oferta & Cennik</a>
         <a href="#galeria">Galeria</a>
@@ -730,7 +674,7 @@
           </div>
 
           <div class="pricing-wrap">
-            <div class="table-wrap">
+            <div class="table-scroll">
             <table aria-label="Cennik zabiegów Aroma Gold Spa">
               <thead>
                 <tr>
@@ -809,7 +753,7 @@
                 <tr data-cat="kids"><td><strong>Kids SPA — Soczysta pomarańcza</strong><br/><span class="muted">Relaksacyjny masaż pleców.</span></td><td class="muted">25 min</td><td class="price">130 zł</td></tr>
               </tbody>
             </table>
-          </div>
+            </div>
 
             <div class="cta" style="margin-top:14px">
               <div>
@@ -838,7 +782,7 @@
 
         <div class="gallery">
           <figure class="photo">
-            <img src="Galeria1.jpg" alt="Wnętrze SPA — strefa relaksu" loading="lazy">
+            <img src="Galeria1.jpg?v=20260121" alt="Wnętrze SPA — strefa relaksu" loading="lazy">
             <figcaption class="overlay">
               <strong>Wnętrze SPA</strong>
               <span>Strefa relaksu i wyciszenia</span>
@@ -846,15 +790,15 @@
           </figure>
 
           <figure class="photo">
-            <img src="Galeria2.jpg" alt="Założycielka Aroma Gold Spa i kosmetolog Paulina" loading="lazy">
+            <img src="Galeria2.jpg?v=20260121" alt="Założycielka Aroma Gold Spa i kosmetolog Paulina" loading="lazy">
             <figcaption class="overlay">
-              <strong>Założycielka & główna kosmetolog</strong>
+              <strong>Założycielka & kosmetolog Paulina</strong>
               <span>Doświadczenie • pasja • indywidualne podejście</span>
             </figcaption>
           </figure>
 
           <figure class="photo">
-            <img src="Galeria3.jpg" alt="Kosmetyki Thalgo, na których pracujemy" loading="lazy">
+            <img src="Galeria3.jpg?v=20260121" alt="Kosmetyki Thalgo, na których pracujemy" loading="lazy">
             <figcaption class="overlay">
               <strong>Thalgo</strong>
               <span>Kosmetyki, na których pracujemy</span>
@@ -947,27 +891,6 @@
   </footer>
 
   <script>
-
-    // Mobile nav (hamburger)
-    const navToggle = document.getElementById("navToggle");
-    const siteMenu = document.getElementById("siteMenu");
-
-    function closeMenu(){
-      if (!siteMenu) return;
-      siteMenu.classList.remove("open");
-      navToggle?.setAttribute("aria-expanded","false");
-    }
-
-    navToggle?.addEventListener("click", () => {
-      const isOpen = siteMenu.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    // zamykaj menu po kliknięciu linku
-    siteMenu?.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", closeMenu);
-    });
-
     // Tabs (Oferta / Cennik)
     const tabOferta = document.getElementById("tab-oferta");
     const tabCennik = document.getElementById("tab-cennik");
