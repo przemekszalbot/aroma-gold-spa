@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aroma Gold Spa — SPA & Kosmetologia</title>
-  <meta name="description" content="Aroma Gold Spa — zabiegi SPA i kosmetologiczne w Wiśle. Oferta, cennik, rezerwacje online (Booksy) i kontakt." />
+  <title>Aroma Gold Spa – SPA i kosmetologia w Wiśle | Masaże • Zabiegi • Booksy</title>
+  <meta name="description" content="Aroma Gold Spa – kameralne SPA i kosmetologia w Wiśle (Centrum Green Hill). Zabiegi na twarz i ciało, masaże, Day Spa dla dwojga. Rezerwacja online Booksy. ul. Dziechcinka 7." />
 
   <style>
     :root{
@@ -423,7 +423,60 @@
       .note{overflow-wrap:anywhere;word-break:break-word}
     }
 
+  
+    /* DAY SPA (dodatkowe kafelki w Ofercie) */
+    .day-spa{margin-top:18px}
+    .day-spa h3{margin:0 0 10px;font-family:var(--serif);font-size:22px}
+    .day-spa .lead{margin:0 0 14px;color:var(--muted);font-weight:650}
+    .day-spa .card h4{margin:0 0 8px;font-family:var(--serif);font-size:18px}
+    .day-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center;color:var(--muted);font-weight:750}
+    .day-meta .pill{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .day-price s{opacity:.7}
+    .day-price strong{color:var(--text)}
+    .day-spa ul{margin:0;padding-left:18px}
+    .day-spa li{margin:6px 0}
+
+    /* Galeria: toggle panel */
+    .gallery-head{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+
+    /* Lightbox (powiększenie zdjęcia po kliknięciu) */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:18px;z-index:2000}
+    .lightbox.open{display:flex}
+    .lightbox-card{max-width:980px;width:100%;background:#111;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.12)}
+    .lightbox-card img{width:100%;height:auto;display:block}
+    .lightbox-bar{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 14px;color:#fff;font-weight:800;background:rgba(0,0,0,.35)}
+    .lightbox-close{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:10px 12px;cursor:pointer;font-weight:900}
+
+    @media(max-width:980px){
+      .day-spa h3{font-size:20px}
+    }
+
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HealthAndBeautyBusiness",
+    "name":"Aroma Gold Spa",
+    "url":"https://aroma-gold-spa.netlify.app/",
+    "telephone":"+48 516 148 189",
+    "email":"spa@centrumgreenhill.pl",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"ul. Dziechcinka 7",
+      "addressLocality":"Wisła",
+      "addressCountry":"PL"
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"14:00","closes":"20:00"}
+    ],
+    "sameAs":[
+      "https://www.facebook.com/share/1Fkdn9rjzR/?mibextid=wwXIfr",
+      "https://www.instagram.com/aroma_gold_spa/?igsh=MTVhdTM1Y2FwYnFzYg%3D%3D"
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
@@ -589,7 +642,7 @@
             </div>
 
             <div class="review-hint">
-              Opinie są wybrane ręcznie — dzięki temu wyglądają estetycznie i zawsze działają.
+             
             </div>
           </div>
 
@@ -597,8 +650,9 @@
           <div>
             <h3>Na jakich kosmetykach pracujemy?</h3>
             <p class="small">
-              Pracujemy m.in. na profesjonalnych kosmetykach <strong>Thalgo</strong> — dlatego zabiegi łączą przyjemność
-              z realną pielęgnacją i komfortem skóry.
+              <strong>Thalgo</strong> — kosmetyki inspirowane bogactwem składników morskich, takich jak algi i minerały, które intensywnie nawilżają,regenerują i odżywiają skórę.
+              <strong>Storyderm<strong> – profesjonalna koreańska marka kosmetyków, łącząca nowoczesne technologie dermatologiczne z wysoką skutecznością pielęgnacyjną
+              <strong>BioOleo<strong> – naturalna pielęgnacja z siłą olejów, kosmetyki tworzone z myślą o naturalnej pielęgnacji skóry i ciała.
             </p>
             <div style="height:10px"></div>
             <a class="btn secondary" href="#galeria">Zobacz galerię</a>
@@ -656,6 +710,58 @@
             </div>
           </div>
         </div>
+
+        
+          <div class="day-spa">
+            <h3>Day Spa</h3>
+            <p class="lead">Pakiety dla dwojga — idealne na wspólny relaks w kameralnym SPA.</p>
+
+            <div class="grid-3">
+              <article class="card">
+                <h4>MAŁE CO NIECO DLA DWOJGA</h4>
+                <p>Z daleka od codziennego pędu pozwól sobie na chwile bliskości w naszym kameralnym SPA. Przy dźwiękach relaksacyjnej muzyki oddaj się zapomnieniu i ciesz się chwilami spędzonymi z bliską Ci osobą.</p>
+                <ul>
+                  <li>Intymny wypoczynek w strefie wellness (jacuzzi, łaźnia parowa, sauna sucha, wypoczywalnia z koloroterapią)</li>
+                  <li>Dla Pań: rytuał pielęgnacyjny na twarz – Cold Cream Marine</li>
+                  <li>Dla Panów: masaż na oleju aromatycznym</li>
+                </ul>
+                <div class="day-meta">
+                  <span class="pill">⏱ 2h</span>
+                  <span class="pill day-price"><s>590 zł</s> <strong>480 zł / 2 os.</strong></span>
+                </div>
+              </article>
+
+              <article class="card">
+                <h4>SŁODKO</h4>
+                <p>Poddaj się naszej czekoladowej terapii. To prawdziwy, rozpieszczający ciało i zmysły zastrzyk pozytywnej energii, a jednocześnie ekspresowa rewitalizacja szczególnie suchej i szorstkiej skóry. Skóra pozostanie na bardzo długo gładka.</p>
+                <ul>
+                  <li>Intymny wypoczynek w strefie wellness (jacuzzi, łaźnia parowa, sauna sucha, wypoczywalnia z koloroterapią)</li>
+                  <li>Peeling całego ciała</li>
+                  <li>Masaż gorącą czekoladą</li>
+                  <li>Wmasowanie olejku czekoladowego</li>
+                </ul>
+                <div class="day-meta">
+                  <span class="pill">⏱ 2,5h</span>
+                  <span class="pill day-price"><s>720 zł</s> <strong>590 zł / 2 os.</strong></span>
+                </div>
+              </article>
+
+              <article class="card">
+                <h4>BLISKO SIEBIE</h4>
+                <p>Zmęczenie, przeciągający się stres, szybkie tempo życia sprawiają, że masz czasami ochotę uciec od całego świata i odpocząć. Z dala od zgiełku i pośpiechu, w urokliwym górskim miejscu przygotowaliśmy prawdziwy zastrzyk rewitalizacyjny, który doda Ci sił i energii.</p>
+                <ul>
+                  <li>Intymny wypoczynek w strefie wellness (jacuzzi, łaźnia parowa, sauna sucha, wypoczywalnia z koloroterapią)</li>
+                  <li>Masaż aromaterapeutyczny dla dwojga</li>
+                  <li>Kompleksowa pielęgnacja twarzy dla dwojga</li>
+                </ul>
+                <div class="day-meta">
+                  <span class="pill">⏱ 3h</span>
+                  <span class="pill day-price"><s>1000 zł</s> <strong>720 zł / 2 os.</strong></span>
+                </div>
+              </article>
+            </div>
+          </div>
+
 
         <!-- TAB: CENNIK -->
         <div class="tab-panel" id="panel-cennik" role="tabpanel" aria-labelledby="tab-cennik" hidden>
@@ -773,13 +879,15 @@
     <!-- GALERIA -->
     <section class="section" id="galeria">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title gallery-head">
           <div>
             <h2>Galeria</h2>
-            <p>Prawdziwe zdjęcia z Aroma Gold Spa.</p>
+            <p>Zdjęcia z Aroma Gold Spa.</p>
           </div>
+          <button class="btn secondary" type="button" id="toggleGallery" aria-expanded="true" aria-controls="galleryPanel">📷 Galeria</button>
         </div>
 
+        <div id="galleryPanel">
         <div class="gallery">
           <figure class="photo">
             <img src="Galeria1.jpg?v=20260121" alt="Wnętrze SPA — strefa relaksu" loading="lazy">
@@ -804,7 +912,32 @@
               <span>Kosmetyki, na których pracujemy</span>
             </figcaption>
           </figure>
+          <figure class="photo">
+            <img src="Galeria4.jpg?v=20260121" alt="Gabinet kosmetyczny" loading="lazy">
+            <figcaption class="overlay">
+              <strong>Gabinet kosmetyczny</strong>
+              <span>Komfort i intymność zabiegów</span>
+            </figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="Galeria5.jpg?v=20260121" alt="Gabinet masażu" loading="lazy">
+            <figcaption class="overlay">
+              <strong>Gabinet masażu</strong>
+              <span>Relaks i odprężenie</span>
+            </figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="Galeria6.jpg?v=20260121" alt="Biooleo cosmetics" loading="lazy">
+            <figcaption class="overlay">
+              <strong>Biooleo cosmetics</strong>
+              <span>Wyselekcjonowane produkty</span>
+            </figcaption>
+          </figure>
+
         </div>
+        </div><!-- /#galleryPanel -->
       </div>
     </section>
 
@@ -903,7 +1036,10 @@
       tabCennik.setAttribute("aria-selected", String(!isOferta));
       panelOferta.hidden = !isOferta;
       panelCennik.hidden = isOferta;
-      document.getElementById("uslugi").scrollIntoView({ behavior: "smooth", block: "start" });
+      const target = (which === "cennik" && window.matchMedia("(max-width: 980px)").matches)
+        ? document.querySelector("#panel-cennik .table-scroll") || panelCennik
+        : document.getElementById("uslugi");
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     tabOferta.addEventListener("click", () => showTab("oferta"));
@@ -988,7 +1124,59 @@
     btnPrev.addEventListener("click", () => { prev(); restart(); });
 
     // pauza przy najechaniu (desktop)
-    const viewport = track.parentElement;
+  
+    // Galeria: show/hide (bez zmiany wyglądu — tylko zwijanie)
+    const toggleGalleryBtn = document.getElementById("toggleGallery");
+    const galleryPanel = document.getElementById("galleryPanel");
+    if(toggleGalleryBtn && galleryPanel){
+      // na telefonie domyślnie zwinięta
+      if(window.matchMedia("(max-width: 980px)").matches){
+        galleryPanel.hidden = true;
+        toggleGalleryBtn.setAttribute("aria-expanded","false");
+      }
+      toggleGalleryBtn.addEventListener("click", () => {
+        const isHidden = galleryPanel.hidden;
+        galleryPanel.hidden = !isHidden;
+        toggleGalleryBtn.setAttribute("aria-expanded", String(isHidden));
+        if(isHidden){
+          galleryPanel.scrollIntoView({behavior:"smooth", block:"start"});
+        }
+      });
+    }
+
+    // Lightbox dla zdjęć galerii
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function openLightbox(src, title, alt){
+      if(!lightbox) return;
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || title || "Zdjęcie";
+      lightboxTitle.textContent = title || "Zdjęcie";
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden","false");
+    }
+    function closeLightbox(){
+      if(!lightbox) return;
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden","true");
+      lightboxImg.src = "";
+    }
+    lightboxClose?.addEventListener("click", closeLightbox);
+    lightbox?.addEventListener("click", (e) => { if(e.target === lightbox) closeLightbox(); });
+    window.addEventListener("keydown", (e) => { if(e.key === "Escape") closeLightbox(); });
+
+    document.querySelectorAll("#galeria .photo img").forEach(img => {
+      img.addEventListener("click", (e) => {
+        e.preventDefault();
+        const fig = img.closest("figure");
+        const cap = fig?.querySelector(".overlay strong")?.textContent?.trim() || "";
+        openLightbox(img.currentSrc || img.src, cap, img.alt);
+      });
+    });
+  const viewport = track.parentElement;
     viewport.addEventListener("mouseenter", stop);
     viewport.addEventListener("mouseleave", start);
 
@@ -996,6 +1184,17 @@
     goTo(0);
     start();
   </script>
+
+  <!-- Lightbox (powiększenie zdjęć) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-card" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+      <div class="lightbox-bar">
+        <div id="lightboxTitle">Zdjęcie</div>
+        <button class="lightbox-close" type="button" id="lightboxClose">Zamknij ✕</button>
+      </div>
+      <img id="lightboxImg" alt="">
+    </div>
+  </div>
+
 </body>
 </html>
-
