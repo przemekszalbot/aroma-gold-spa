@@ -1209,45 +1209,268 @@
       <img id="lightboxImg" alt="">
     </div>
   </div>
-<div id="cookie-banner" style="
-position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
-background: #111;
-color: white;
-padding: 15px;
-text-align: center;
-font-size: 14px;
-z-index: 9999;
-">
-Ta strona wykorzystuje pliki cookies w celach technicznych i statystycznych.
-Korzystając ze strony, wyrażasz zgodę na ich użycie.
-<button onclick="acceptCookies()" style="
-margin-left: 15px;
-padding: 8px 15px;
-background: gold;
-border: none;
-cursor: pointer;
-font-weight: bold;
-">
-Akceptuję
-</button>
+<!-- Cookie banner (PRO) - wklej przed </body> -->
+<div id="cookie-consent" style="display:none;">
+  <div id="cookie-backdrop" aria-hidden="true"></div>
+
+  <div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+    <div class="cookie-header">
+      <div>
+        <div id="cookie-title" class="cookie-title">Ustawienia plików cookies</div>
+        <div id="cookie-desc" class="cookie-desc">
+          Używamy cookies, aby strona działała poprawnie oraz (opcjonalnie) do analityki i marketingu.
+          Możesz zaakceptować wszystkie, odrzucić lub wybrać ustawienia.
+        </div>
+      </div>
+      <button class="cookie-x" type="button" aria-label="Zamknij" id="cookie-close">×</button>
+    </div>
+
+    <div class="cookie-body">
+      <div class="cookie-cats">
+        <label class="cookie-row">
+          <div>
+            <div class="cookie-cat-title">Niezbędne (zawsze aktywne)</div>
+            <div class="cookie-cat-desc">Wymagane do działania strony i zapisania Twoich ustawień.</div>
+          </div>
+          <div class="cookie-pill cookie-pill-on" aria-hidden="true">Włączone</div>
+        </label>
+
+        <label class="cookie-row">
+          <div>
+            <div class="cookie-cat-title">Analityczne</div>
+            <div class="cookie-cat-desc">Pomagają nam zrozumieć ruch na stronie (np. Google Analytics) — tylko za Twoją zgodą.</div>
+          </div>
+          <input type="checkbox" id="consent-analytics" />
+        </label>
+
+        <label class="cookie-row">
+          <div>
+            <div class="cookie-cat-title">Marketingowe</div>
+            <div class="cookie-cat-desc">Umożliwiają personalizację reklam i pomiar kampanii (np. Meta Pixel) — tylko za Twoją zgodą.</div>
+          </div>
+          <input type="checkbox" id="consent-marketing" />
+        </label>
+      </div>
+
+      <div class="cookie-links">
+        <a href="/polityka-prywatnosci" target="_blank" rel="noopener">Polityka prywatności</a>
+        <span aria-hidden="true">•</span>
+        <button type="button" class="cookie-link-btn" id="cookie-open-settings">Zmień ustawienia</button>
+      </div>
+    </div>
+
+    <div class="cookie-actions">
+      <button type="button" class="cookie-btn cookie-btn-ghost" id="cookie-reject">Odrzuć</button>
+      <button type="button" class="cookie-btn cookie-btn-outline" id="cookie-save">Zapisz wybór</button>
+      <button type="button" class="cookie-btn cookie-btn-primary" id="cookie-accept">Akceptuj wszystkie</button>
+    </div>
+  </div>
 </div>
 
-<script>
-function acceptCookies() {
-  localStorage.setItem("cookiesAccepted", "true");
-  document.getElementById("cookie-banner").style.display = "none";
-}
+<style>
+  /* Minimalny, elegancki wygląd bez frameworków */
+  #cookie-backdrop{
+    position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 9998;
+  }
+  #cookie-banner{
+    position: fixed;
+    left: 50%; bottom: 18px; transform: translateX(-50%);
+    width: min(920px, calc(100% - 24px));
+    background: #111;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 16px;
+    box-shadow: 0 18px 60px rgba(0,0,0,.45);
+    z-index: 9999;
+    padding: 16px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  .cookie-header{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+    margin-bottom: 10px;
+  }
+  .cookie-title{ font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .cookie-desc{ font-size: 13px; line-height: 1.45; color: rgba(255,255,255,.82); }
+  .cookie-x{
+    background: transparent; border: none; color:#fff; font-size: 22px; line-height: 1;
+    cursor: pointer; padding: 2px 8px; opacity: .8;
+  }
+  .cookie-x:hover{ opacity: 1; }
+  .cookie-body{ margin-top: 10px; }
+  .cookie-cats{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 10px 0 8px;
+  }
+  .cookie-row{
+    display:flex; justify-content:space-between; align-items:center; gap: 12px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+  .cookie-cat-title{ font-weight: 650; font-size: 13px; margin-bottom: 3px; }
+  .cookie-cat-desc{ font-size: 12px; color: rgba(255,255,255,.78); line-height: 1.4; }
+  .cookie-pill{
+    font-size: 12px; padding: 6px 10px; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255,255,255,.08);
+    color: rgba(255,255,255,.9);
+    white-space: nowrap;
+  }
+  .cookie-pill-on{
+    background: rgba(46, 204, 113, .16);
+    border-color: rgba(46, 204, 113, .35);
+  }
+  .cookie-links{
+    display:flex; gap:10px; align-items:center; flex-wrap: wrap;
+    font-size: 12px; margin-top: 6px;
+  }
+  .cookie-links a{ color: rgba(255,255,255,.9); text-decoration: underline; }
+  .cookie-link-btn{
+    background:none; border:none; color: rgba(255,255,255,.9);
+    text-decoration: underline; cursor: pointer; padding: 0;
+  }
+  .cookie-actions{
+    display:flex; gap:10px; justify-content:flex-end; flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .cookie-btn{
+    border-radius: 10px; padding: 10px 12px; font-weight: 650;
+    cursor:pointer; border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.10); color:#fff;
+  }
+  .cookie-btn:hover{ background: rgba(255,255,255,.14); }
+  .cookie-btn-primary{
+    background: #f0c341; color:#111; border-color: rgba(240,195,65,.75);
+  }
+  .cookie-btn-primary:hover{ filter: brightness(1.02); }
+  .cookie-btn-outline{
+    background: transparent; border-color: rgba(240,195,65,.55); color:#fff;
+  }
+  .cookie-btn-ghost{
+    background: transparent; border-color: rgba(255,255,255,.18); color: rgba(255,255,255,.9);
+  }
 
-if (localStorage.getItem("cookiesAccepted") === "true") {
-  document.getElementById("cookie-banner").style.display = "none";
-}
+  /* Mobile: banner jako „kartka” */
+  @media (max-width: 520px){
+    #cookie-banner{ bottom: 12px; padding: 14px; }
+    .cookie-actions{ justify-content: stretch; }
+    .cookie-btn{ flex: 1 1 auto; }
+  }
+</style>
+
+<script>
+  // ---- Cookie consent PRO ----
+  // Zapis w localStorage: { necessary: true, analytics: boolean, marketing: boolean, ts: number }
+  const CONSENT_KEY = "agspa_cookie_consent_v1";
+
+  function getConsent() {
+    try { return JSON.parse(localStorage.getItem(CONSENT_KEY) || "null"); }
+    catch { return null; }
+  }
+
+  function setConsent(consent) {
+    localStorage.setItem(CONSENT_KEY, JSON.stringify({ ...consent, necessary: true, ts: Date.now() }));
+    applyConsent();
+    hideBanner();
+  }
+
+  function showBanner() {
+    const wrap = document.getElementById("cookie-consent");
+    wrap.style.display = "block";
+    // fokus dla dostępności
+    document.getElementById("cookie-accept").focus();
+  }
+
+  function hideBanner() {
+    const wrap = document.getElementById("cookie-consent");
+    wrap.style.display = "none";
+  }
+
+  function applyConsent() {
+    const consent = getConsent();
+
+    // Domyślnie: brak zgody na nie-niezbędne
+    const analyticsOk = !!(consent && consent.analytics);
+    const marketingOk = !!(consent && consent.marketing);
+
+    // Tu w przyszłości podłączysz narzędzia:
+    // - jeśli analyticsOk === true → ładuj Google Analytics
+    // - jeśli marketingOk === true → ładuj Pixel / Ads
+    //
+    // Na dziś (gdy nie masz trackingów) nic nie musimy robić.
+    // Dla porządku zostawiamy event do debugowania:
+    window.dispatchEvent(new CustomEvent("cookieConsentUpdated", {
+      detail: { necessary: true, analytics: analyticsOk, marketing: marketingOk }
+    }));
+  }
+
+  // UI helpers
+  function syncTogglesFromStored() {
+    const consent = getConsent();
+    document.getElementById("consent-analytics").checked = !!(consent && consent.analytics);
+    document.getElementById("consent-marketing").checked = !!(consent && consent.marketing);
+  }
+
+  // Start
+  document.addEventListener("DOMContentLoaded", () => {
+    const stored = getConsent();
+    if (!stored) {
+      // brak decyzji → pokaż banner
+      showBanner();
+      syncTogglesFromStored();
+    } else {
+      // jest decyzja → zastosuj i nie pokazuj
+      applyConsent();
+      hideBanner();
+    }
+
+    // Buttons
+    document.getElementById("cookie-accept").addEventListener("click", () => {
+      setConsent({ analytics: true, marketing: true });
+    });
+
+    document.getElementById("cookie-reject").addEventListener("click", () => {
+      setConsent({ analytics: false, marketing: false });
+    });
+
+    document.getElementById("cookie-save").addEventListener("click", () => {
+      setConsent({
+        analytics: document.getElementById("consent-analytics").checked,
+        marketing: document.getElementById("consent-marketing").checked
+      });
+    });
+
+    document.getElementById("cookie-close").addEventListener("click", () => {
+      // zamknięcie bez zgody traktujemy jak odrzucenie (bezpieczne prawnie)
+      setConsent({ analytics: false, marketing: false });
+    });
+
+    document.getElementById("cookie-open-settings").addEventListener("click", () => {
+      // w tej wersji ustawienia są w samym bannerze (checkboxy),
+      // więc tylko przewijamy fokus na pierwsze ustawienie
+      document.getElementById("consent-analytics").focus();
+    });
+
+    // klik w tło też zamyka jak "odrzuć"
+    document.getElementById("cookie-backdrop").addEventListener("click", () => {
+      setConsent({ analytics: false, marketing: false });
+    });
+  });
+
+  // (Opcjonalnie) funkcja do wywołania np. z linku w stopce:
+  // <button onclick="openCookieSettings()">Ustawienia cookies</button>
+  function openCookieSettings() {
+    showBanner();
+    syncTogglesFromStored();
+  }
 </script>
   
 </body>
 </html>
+
 
 
 
