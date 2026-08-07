@@ -4,25 +4,27 @@
   <meta charset="utf-8" />
   <meta name="google-site-verification" content="oe4DaMRRPD0xA7yFTijR4HqUqBUlfw1YLYJCRjdAygI" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>SPA Wisła – masaże, zabiegi i Day SPA | Aroma Gold Spa</title>
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="canonical" href="https://www.aromagoldspa.pl/">
+  <meta name="description" content="Aroma Gold Spa w Wiśle – kameralne SPA, masaże, Kobido, zabiegi pielęgnacyjne oraz pakiety Day SPA dla dwojga. Sprawdź ofertę i zarezerwuj wizytę." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="description" content="Aroma Gold Spa w Wiśle – masaże, Kobido, zabiegi na twarz i ciało oraz pakiety Day SPA dla dwojga. Sprawdź ofertę i zarezerwuj wizytę online." />
+  <link rel="canonical" href="https://www.aromagoldspa.pl/" />
+
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
 
   <meta property="og:locale" content="pl_PL" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Aroma Gold Spa" />
   <meta property="og:title" content="SPA Wisła – masaże, zabiegi i Day SPA | Aroma Gold Spa" />
-  <meta property="og:description" content="Kameralne SPA w Wiśle: masaże, Kobido, zabiegi pielęgnacyjne oraz pakiety Day SPA dla dwojga." />
+  <meta property="og:description" content="Kameralne SPA w Wiśle: masaże, Kobido, pielęgnacja oraz pakiety Day SPA dla dwojga." />
   <meta property="og:url" content="https://www.aromagoldspa.pl/" />
   <meta property="og:image" content="https://www.aromagoldspa.pl/Galeria1.jpg" />
   <meta property="og:image:alt" content="Wnętrze Aroma Gold Spa w Wiśle" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="SPA Wisła – masaże, zabiegi i Day SPA | Aroma Gold Spa" />
-  <meta name="twitter:description" content="Kameralne SPA w Wiśle: masaże, Kobido, zabiegi pielęgnacyjne oraz pakiety Day SPA dla dwojga." />
+  <meta name="twitter:description" content="Kameralne SPA w Wiśle: masaże, Kobido, pielęgnacja oraz pakiety Day SPA dla dwojga." />
   <meta name="twitter:image" content="https://www.aromagoldspa.pl/Galeria1.jpg" />
 
   <style>
@@ -30,27 +32,21 @@
       --bg:#fbf2ee;
       --surface:#fffaf7;
       --surface2:#fff2ed;
-
       --text:#3b2b25;
       --muted:#7a5f56;
       --line:rgba(59,43,37,.12);
-
       --accent:#c7a27a;
       --accent2:#d7b8b1;
       --accent3:#b58a6e;
-
       --shadow:0 18px 45px rgba(59,43,37,.12);
       --radius:18px;
       --max:1120px;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    html,body{overflow-x:hidden}
-    *{min-width:0}
-    img,svg,iframe{max-width:100%}
+    *{box-sizing:border-box;min-width:0}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;overflow-x:hidden}
     body{
-      margin:0;
       font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:
@@ -58,427 +54,170 @@
         radial-gradient(900px 520px at 10% 10%, rgba(199,162,122,.35), transparent 60%),
         var(--bg);
     }
-
+    img,svg,iframe{max-width:100%}
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
     /* NAV */
     .nav{
-      position:sticky;top:0;z-index:50;
+      position:sticky;top:0;z-index:100;
       backdrop-filter:saturate(150%) blur(10px);
-      background:rgba(251,242,238,.72);
+      background:rgba(251,242,238,.88);
       border-bottom:1px solid var(--line);
     }
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:14px}
-    .brand{
-      display:flex;align-items:center;gap:14px;
-      font-weight:800;letter-spacing:.2px;min-width:260px;
-    }
-    .brand img{
-      width:72px;height:72px;border-radius:18px;object-fit:cover;
-      border:1px solid rgba(59,43,37,.10);
-      background:#fff;
-      box-shadow:0 14px 30px rgba(59,43,37,.12);
-    }
-    .brand .name{display:flex;flex-direction:column;line-height:1.08}
-    .brand .name span:first-child{font-size:16px}
-    .brand .name span:last-child{font-size:12px;color:var(--muted);font-weight:650;margin-top:6px}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;flex:0 0 auto}
+    .brand img{width:58px;height:58px;border-radius:15px;object-fit:cover;border:1px solid var(--line);background:#fff;box-shadow:0 10px 24px rgba(59,43,37,.10)}
+    .brand-name{display:flex;flex-direction:column;line-height:1.08}
+    .brand-name strong{font-size:15px}
+    .brand-name span{font-size:11px;color:var(--muted);margin-top:5px}
+    .nav-links{display:flex;align-items:center;justify-content:flex-end;gap:4px}
+    .nav-links a{padding:9px 9px;border-radius:11px;color:var(--muted);font-weight:750;font-size:14px;transition:.16s ease}
+    .nav-links a:hover{color:var(--text);background:rgba(199,162,122,.12)}
+    .nav-links .nav-cta{border:1px solid rgba(199,162,122,.45);background:linear-gradient(135deg,rgba(199,162,122,.26),rgba(215,184,177,.22));color:var(--text);margin-left:4px}
+    .menu-toggle{display:none;border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:12px;padding:9px 11px;font-weight:900;color:var(--text);cursor:pointer}
 
-    .nav-links{
-      display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;align-items:center;
-    }
-    .nav-links a{
-      color:var(--muted);
-      padding:8px 10px;border-radius:12px;
-      transition:.18s ease;border:1px solid transparent;font-weight:650;
-    }
-    .nav-links a:hover{
-      color:var(--text);
-      background:rgba(199,162,122,.12);
-      border-color:rgba(199,162,122,.22);
-    }
-
-    /* Buttons */
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 16px;border-radius:14px;
-      border:1px solid rgba(199,162,122,.45);
-      background:linear-gradient(135deg, rgba(199,162,122,.26), rgba(215,184,177,.22));
-      color:var(--text);
-      box-shadow:0 12px 26px rgba(59,43,37,.10);
-      transition:transform .16s ease,border-color .16s ease,background .16s ease;
-      cursor:pointer;font-weight:800;white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-1px);border-color:rgba(181,138,110,.55)}
-    .btn.secondary{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.65);
-      box-shadow:none;font-weight:800;
-    }
-    .btn.secondary:hover{background:rgba(255,255,255,.9)}
-    .btn.nav-cta{
-      padding:10px 14px;
-      border-radius:999px;
-    }
-
-    /* Icons */
+    /* COMMON */
+    .section{padding:36px 0}
+    .section-title{margin:0 0 18px}
+    .section-title h2{font-size:clamp(24px,3vw,32px);line-height:1.15;margin:0 0 7px;letter-spacing:-.3px}
+    .section-title p{margin:0;color:var(--muted);max-width:75ch}
+    .card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.76);padding:20px;box-shadow:0 16px 36px rgba(59,43,37,.09)}
+    .card h3{margin:0 0 7px;font-size:19px}
+    .card p{margin:0;color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .muted{color:var(--muted)}
     .icon{width:16px;height:16px;display:inline-block;vertical-align:-3px}
 
-    .social{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .social a{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 12px;border-radius:999px;
-      border:1px solid rgba(181,138,110,.22);
-      background:rgba(255,255,255,.72);
-      color:var(--muted);
-      font-weight:800;font-size:14px;
-      transition:.15s ease;
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:12px 16px;border-radius:14px;border:1px solid rgba(199,162,122,.45);
+      background:linear-gradient(135deg,rgba(199,162,122,.26),rgba(215,184,177,.22));
+      color:var(--text);box-shadow:0 12px 26px rgba(59,43,37,.09);font-weight:850;
+      transition:.16s ease;cursor:pointer;
     }
-    .social a:hover{background:rgba(215,184,177,.20);border-color:rgba(181,138,110,.35);color:var(--text)}
+    .btn:hover{transform:translateY(-1px);border-color:rgba(181,138,110,.58)}
+    .btn.secondary{background:rgba(255,255,255,.72);border-color:var(--line);box-shadow:none}
 
     /* HERO */
-    .hero{padding:52px 0 22px;position:relative;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .brand{min-width:unset}
-      .brand img{width:62px;height:62px}
-    }
+    .hero{padding:48px 0 28px}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:stretch}
+    .hero-card,.hero-photo{border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+    .hero-card{padding:30px;background:radial-gradient(900px 420px at 15% 0%,rgba(215,184,177,.55),transparent 60%),rgba(255,255,255,.80)}
+    .badge{display:inline-flex;padding:7px 12px;border-radius:999px;border:1px solid rgba(181,138,110,.30);background:rgba(215,184,177,.18);font-weight:850;font-size:13px;margin-bottom:15px}
+    h1{margin:0 0 14px;font-size:clamp(32px,4.5vw,52px);line-height:1.05;letter-spacing:-.7px}
+    .hero-lead{font-size:17px;color:var(--muted);max-width:63ch;margin:0 0 12px}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:20px}
+    .hero-note{font-size:13px;color:var(--muted);margin-top:16px}
+    .hero-photo{position:relative;min-height:430px;background:#fff}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-photo .caption{position:absolute;left:0;right:0;bottom:0;padding:34px 20px 17px;background:linear-gradient(transparent,rgba(59,43,37,.72));color:#fff}
+    .hero-photo .caption strong{font-size:18px}
 
-    .hero-card{
-      border:1px solid var(--line);
-      border-radius:24px;
-      background:
-        radial-gradient(900px 420px at 15% 0%, rgba(215,184,177,.55), transparent 60%),
-        rgba(255,255,255,.78);
-      box-shadow:var(--shadow);
-      padding:26px;
-    }
-    .badge{
-      display:inline-flex;gap:10px;align-items:center;
-      padding:7px 12px;border-radius:999px;
-      border:1px solid rgba(181,138,110,.30);
-      background:rgba(215,184,177,.18);
-      font-weight:850;letter-spacing:.2px;margin-bottom:14px;
-    }
-    .hero h1{
-      margin:0 0 10px;
-      font-size:clamp(28px, 4vw, 46px);
-      line-height:1.08;letter-spacing:-.5px;
-    }
-    .hero p{margin:0 0 12px;color:var(--muted);max-width:75ch}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    .note{font-size:13px;color:var(--muted);margin-top:12px}
+    /* SERVICES */
+    .service-card{display:flex;flex-direction:column;min-height:210px;transition:.18s ease}
+    .service-card:hover{transform:translateY(-3px);border-color:rgba(181,138,110,.35);box-shadow:0 20px 42px rgba(59,43,37,.13)}
+    .service-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--accent3);font-weight:900;margin-bottom:7px}
+    .service-card p{flex:1}
+    .service-link{display:inline-flex;margin-top:16px;color:var(--accent3);font-weight:900;text-decoration:underline;text-underline-offset:4px}
 
-    .info-card{
-      border:1px solid var(--line);
-      border-radius:24px;
-      background:rgba(255,255,255,.75);
-      box-shadow:var(--shadow);
-      padding:20px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-    .info-card h3{margin:0 0 10px;font-size:18px}
-    .list{margin:0;padding-left:18px;color:var(--muted)}
-    .list li{margin:8px 0}
-    .small{color:var(--muted);font-size:14px}
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    .feature-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .mini{border:1px solid var(--line);background:rgba(255,255,255,.62);border-radius:15px;padding:14px}
+    .mini strong{display:block;margin-bottom:4px}
+    .mini span{color:var(--muted);font-size:14px}
+    .brands{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .brand-pill{padding:7px 10px;border-radius:999px;border:1px solid rgba(181,138,110,.25);background:rgba(215,184,177,.15);font-weight:850;font-size:13px}
 
-    /* SECTIONS */
-    .section{padding:26px 0}
-    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 14px}
-    .section-title h2{margin:0;font-size:26px;letter-spacing:-.2px}
-    .section-title p{margin:0;color:var(--muted);max-width:74ch}
-
-    .card{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:rgba(255,255,255,.75);
-      padding:18px;
-      box-shadow:0 16px 36px rgba(59,43,37,.10);
-    }
-    .card h3{margin:0 0 6px;font-size:18px}
-    .card p{margin:0;color:var(--muted)}
-
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media (max-width: 980px){ .grid-3{grid-template-columns:1fr} }
-
-    .tag{
-      display:inline-flex;
-      padding:6px 10px;border-radius:999px;
-      border:1px solid rgba(181,138,110,.22);
-      background:rgba(215,184,177,.18);
-      color:var(--muted);
-      font-size:13px;margin-top:10px;font-weight:750;
-    }
-
-    /* CTA */
-    .cta{
-      border:1px solid rgba(181,138,110,.22);
-      background:
-        radial-gradient(800px 260px at 20% 0%, rgba(215,184,177,.40), transparent 60%),
-        rgba(255,255,255,.76);
-      border-radius:24px;
-      padding:18px;
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .cta strong{font-size:18px}
-
-    /* TABS: Oferta / Cennik */
-    .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}
-    .tab-btn{
-      padding:12px 18px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.86);
-      color:var(--muted);
-      font-weight:950;
-      cursor:pointer;
-      transition:.15s ease;
-      box-shadow:0 10px 22px rgba(59,43,37,.07);
-    }
-    .tab-btn[aria-selected="true"]{
-      color:var(--text);
-      border-color:rgba(181,138,110,.45);
-      background:rgba(215,184,177,.26);
-    }
-    .tab-panel[hidden]{display:none!important}
+    /* REVIEWS */
+    .reviews-wrap{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.78);padding:16px;box-shadow:0 16px 36px rgba(59,43,37,.08)}
+    .reviews-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .stars{letter-spacing:.08em;font-weight:900;color:#a57c5f}
+    .review-viewport{overflow:hidden;border-radius:16px;border:1px solid rgba(59,43,37,.10);background:rgba(255,255,255,.62)}
+    .review-track{display:flex;transition:transform .35s ease;will-change:transform}
+    .review{min-width:100%;padding:18px}
+    .review-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .review-who{font-weight:900}
+    .review-src{font-size:12px;color:var(--muted);font-weight:900;padding:4px 8px;border-radius:999px;border:1px solid rgba(181,138,110,.22);background:rgba(215,184,177,.14)}
+    .review p{margin:10px 0 0;color:var(--muted)}
+    .review-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}
+    .rev-btn{width:38px;height:38px;border-radius:12px;border:1px solid rgba(181,138,110,.25);background:rgba(255,255,255,.82);cursor:pointer;font-weight:950;color:var(--muted)}
+    .dots{display:flex;gap:6px;align-items:center;justify-content:center;flex:1}
+    .dot{width:8px;height:8px;border-radius:999px;border:1px solid rgba(181,138,110,.35);background:rgba(181,138,110,.10);cursor:pointer}
+    .dot[aria-current="true"]{background:rgba(181,138,110,.55)}
 
     /* PRICING */
-    .pricing-wrap{display:grid;grid-template-columns:1fr;gap:12px}
-    .table-scroll{overflow:auto;-webkit-overflow-scrolling:touch;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,85)}
-    .table-scroll table{min-width:720px}
-    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:12px 0 10px}
-    .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{
-      padding:8px 12px;border-radius:999px;border:1px solid var(--line);
-      background:rgba(255,255,255,.75);
-      color:var(--muted);
-      cursor:pointer;
-      transition:.15s ease;
-      font-weight:900;
-      font-size:14px;
-    }
-    .chip[aria-pressed="true"]{
-      color:var(--text);
-      border-color:rgba(181,138,110,.38);
-      background:rgba(215,184,177,.22);
-    }
-    .search{
-      width:min(420px, 100%);
-      padding:10px 12px;border-radius:14px;border:1px solid var(--line);
-      background:rgba(255,255,255,.85);
-      color:var(--text);
-      outline:none;
-    }
-
-    table{
-      width:100%;
-      border-collapse:separate;border-spacing:0;
-      overflow:hidden;border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.78);
-      box-shadow:0 16px 36px rgba(59,43,37,.10);
-    }
-    th,td{padding:14px 14px;border-bottom:1px solid var(--line);vertical-align:top}
-    th{
-      font-size:13px;text-transform:uppercase;letter-spacing:.08em;
-      color:var(--muted);
-      background:rgba(255,255,255,.75);
-    }
+    .price-details{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.70);box-shadow:0 16px 36px rgba(59,43,37,.08);overflow:hidden}
+    .price-details summary{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;cursor:pointer;font-weight:900;list-style:none}
+    .price-details summary::-webkit-details-marker{display:none}
+    .price-details summary::after{content:"+";font-size:24px;color:var(--accent3)}
+    .price-details[open] summary::after{content:"–"}
+    .price-content{padding:0 18px 18px}
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:5px 0 12px}
+    .chips{display:flex;gap:7px;flex-wrap:wrap}
+    .chip{padding:8px 11px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.78);color:var(--muted);cursor:pointer;font-weight:850;font-size:13px}
+    .chip[aria-pressed="true"]{color:var(--text);border-color:rgba(181,138,110,.38);background:rgba(215,184,177,.22)}
+    .search{width:min(390px,100%);padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.90);color:var(--text);outline:none}
+    .table-scroll{overflow:auto;-webkit-overflow-scrolling:touch;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.85)}
+    table{width:100%;min-width:720px;border-collapse:collapse}
+    th,td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:rgba(255,255,255,.72);text-align:left}
     tr:last-child td{border-bottom:none}
     .price{white-space:nowrap;font-weight:900}
-    .muted{color:var(--muted)}
-
-    /* REVIEWS CAROUSEL */
-    .reviews-wrap{
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(255,255,255,.78);
-      padding:14px;
-    }
-    .reviews-head{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-      margin-bottom:10px;
-    }
-    .stars{letter-spacing:.08em;font-weight:900;color:#a57c5f}
-    .review-viewport{
-      position:relative;
-      overflow:hidden;
-      border-radius:16px;
-      border:1px solid rgba(59,43,37,.10);
-      background:rgba(255,255,255,.65);
-    }
-    .review-track{
-      display:flex;
-      transition: transform .35s ease;
-      will-change: transform;
-    }
-    .review{
-      min-width:100%;
-      padding:14px;
-    }
-    .review .top{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-    }
-    .review .who{
-      font-weight:950;
-      color:var(--text);
-    }
-    .review .src{
-      font-size:12px;
-      color:var(--muted);
-      font-weight:900;
-      padding:4px 8px;
-      border-radius:999px;
-      border:1px solid rgba(181,138,110,.22);
-      background:rgba(215,184,177,.14);
-      white-space:nowrap;
-    }
-    .review p{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .review-controls{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      margin-top:10px;
-    }
-    .rev-btn{
-      width:38px;height:38px;
-      display:inline-flex;align-items:center;justify-content:center;
-      border-radius:12px;
-      border:1px solid rgba(181,138,110,.25);
-      background:rgba(255,255,255,.82);
-      cursor:pointer;
-      font-weight:950;
-      color:var(--muted);
-      transition:.15s ease;
-    }
-    .rev-btn:hover{
-      background:rgba(215,184,177,.18);
-      color:var(--text);
-      border-color:rgba(181,138,110,.35);
-    }
-    .dots{display:flex;gap:6px;align-items:center;justify-content:center;flex:1}
-    .dot{
-      width:8px;height:8px;border-radius:999px;
-      border:1px solid rgba(181,138,110,.35);
-      background:rgba(181,138,110,.10);
-      cursor:pointer;
-    }
-    .dot[aria-current="true"]{
-      background:rgba(181,138,110,.55);
-    }
-    .review-actions{
-      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;
-    }
-    .review-hint{font-size:12px;color:var(--muted);margin-top:8px}
 
     /* GALLERY */
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media (max-width: 980px){ .gallery{grid-template-columns:1fr} }
-    .photo{
-      position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line);
-      box-shadow:0 16px 36px rgba(59,43,37,.10);
-      background:rgba(255,255,255,.78);
-      min-height:260px;
-    }
-    .photo img{
-      width:100%;height:100%;display:block;object-fit:cover;
-      transform:scale(1.02);
-      transition:transform .35s ease;
-      filter:saturate(1.02) contrast(1.02);
-    }
-    .photo:hover img{transform:scale(1.06)}
-    .overlay{
-      position:absolute;inset:auto 0 0 0;
-      padding:14px 14px 12px;
-      background:linear-gradient(180deg, transparent, rgba(59,43,37,.60));
-      color:#fff;
-    }
-    .overlay strong{display:block;font-size:16px;letter-spacing:.2px}
-    .overlay span{display:block;font-size:13px;opacity:.92;margin-top:4px}
+    .photo{position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line);box-shadow:0 16px 36px rgba(59,43,37,.09);background:#fff;min-height:270px;cursor:pointer}
+    .photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s ease}
+    .photo:hover img{transform:scale(1.04)}
+    .overlay{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(transparent,rgba(59,43,37,.62));color:#fff}
+    .overlay strong{display:block}
+    .overlay span{font-size:13px;opacity:.93}
 
-    /* CONTACT + MAP */
-    .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
-    @media (max-width: 900px){ .cols{grid-template-columns:1fr} }
-    .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    @media (max-width: 700px){ .contact-grid{grid-template-columns:1fr} }
+    /* CONTACT */
+    .cols{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;align-items:start}
+    .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .contact-item{padding:13px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.62)}
+    .map{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+    .map iframe{width:100%;height:315px;border:0;display:block}
+    .social{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .social a{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border-radius:999px;border:1px solid rgba(181,138,110,.22);background:rgba(255,255,255,.72);color:var(--muted);font-weight:800;font-size:13px}
 
-    .map{
-      border:1px solid var(--line);
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 16px 36px rgba(59,43,37,.10);
-      background:rgba(255,255,255,.78);
-    }
-    .map iframe{width:100%;height:320px;border:0;display:block}
-
-    /* Footer */
-    .footer{
-      margin-top:28px;
-      border-top:1px solid var(--line);
-      padding:20px 0 34px;
-      color:var(--muted);
-      background:rgba(255,255,255,.45);
-    }
-  
-    /* MOBILE FIX: iPhone — początek strony bez "wyjeżdżania" */
-    @media (max-width: 520px){
-      .container{padding:0 14px}
-      .nav-inner{flex-wrap:wrap}
-      .brand{min-width:unset}
-      .nav-links{width:100%;justify-content:flex-start}
-      .btn{white-space:normal}
-      .hero-actions{flex-direction:column;align-items:stretch}
-      .hero-actions .btn{width:100%}
-      .note{overflow-wrap:anywhere;word-break:break-word}
-    }
-
-  
-    /* DAY SPA (dodatkowe kafelki w Ofercie) */
-    .day-spa{margin-top:18px}
-    .day-spa h3{margin:0 0 10px;font-family:var(--serif);font-size:22px}
-    .day-spa .lead{margin:0 0 14px;color:var(--muted);font-weight:650}
-    .day-spa .card h4{margin:0 0 8px;font-family:var(--serif);font-size:18px}
-    .day-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center;color:var(--muted);font-weight:750}
-    .day-meta .pill{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.55)}
-    .day-price s{opacity:.7}
-    .day-price strong{color:var(--text)}
-    .day-spa ul{margin:0;padding-left:18px}
-    .day-spa li{margin:6px 0}
-
-    /* Galeria: toggle panel */
-    .gallery-head{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
-
-    /* Lightbox (powiększenie zdjęcia po kliknięciu) */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:18px;z-index:2000}
+    /* FOOTER + LIGHTBOX */
+    .footer{margin-top:24px;border-top:1px solid var(--line);padding:21px 0 30px;color:var(--muted);background:rgba(255,255,255,.42)}
+    .footer-inner{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
+    .footer-links{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:750}
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.74);display:none;align-items:center;justify-content:center;padding:18px;z-index:2000}
     .lightbox.open{display:flex}
     .lightbox-card{max-width:980px;width:100%;background:#111;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.12)}
     .lightbox-card img{width:100%;height:auto;display:block}
-    .lightbox-bar{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 14px;color:#fff;font-weight:800;background:rgba(0,0,0,.35)}
-    .lightbox-close{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:10px 12px;cursor:pointer;font-weight:900}
+    .lightbox-bar{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 14px;color:#fff;background:rgba(0,0,0,.35)}
+    .lightbox-close{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:9px 11px;cursor:pointer;font-weight:900}
 
     @media(max-width:980px){
-      .day-spa h3{font-size:20px}
+      .hero-grid,.about-grid,.cols{grid-template-columns:1fr}
+      .grid-3,.gallery{grid-template-columns:1fr}
+      .feature-list{grid-template-columns:1fr}
+      .hero-photo{min-height:330px}
+      .menu-toggle{display:inline-flex}
+      .nav-inner{flex-wrap:wrap}
+      .nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;padding:4px 0 8px}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:10px 12px}
+      .nav-links .nav-cta{margin-left:0;text-align:center}
     }
-
-    /* SEO: czytelne linki do podstron usług */
-    .seo-link{
-      display:inline-flex;align-items:center;gap:6px;margin-top:12px;
-      color:var(--accent3);font-weight:900;text-decoration:underline;
-      text-decoration-thickness:1px;text-underline-offset:4px;
+    @media(max-width:560px){
+      .container{padding:0 14px}
+      .brand img{width:52px;height:52px}
+      .brand-name span{display:none}
+      .hero{padding-top:28px}
+      .hero-card{padding:22px}
+      .hero-actions{flex-direction:column;align-items:stretch}
+      .hero-actions .btn{width:100%}
+      .contact-grid{grid-template-columns:1fr}
+      .price-content{padding:0 12px 12px}
     }
-    .seo-link:hover{color:var(--text)}
-    .service-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-
   </style>
 
   <script type="application/ld+json">
@@ -504,329 +243,170 @@
     ]
   }
   </script>
-
 </head>
-
 <body>
-  <!-- SVG symbols -->
-  <svg width="0" height="0" style="position:absolute">
-    <symbol id="icon-fb" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-7H8v-2.88h2.44V9.8c0-2.41 1.44-3.74 3.64-3.74 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.2 0-1.57.74-1.57 1.5v1.8H16.7L16.3 14.88h-2.36v7A10 10 0 0 0 22 12z"/>
-    </symbol>
-    <symbol id="icon-ig" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5zM18 6.8a.7.7 0 1 1-.7-.7.7.7 0 0 1 .7.7z"/>
-    </symbol>
-    <symbol id="icon-pin" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12 22s7-6.2 7-13a7 7 0 0 0-14 0c0 6.8 7 13 7 13zm0-9.2A2.8 2.8 0 1 1 14.8 10 2.8 2.8 0 0 1 12 12.8z"/>
-    </symbol>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icon-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-7H8v-2.88h2.44V9.8c0-2.41 1.44-3.74 3.64-3.74 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.2 0-1.57.74-1.57 1.5v1.8H16.7L16.3 14.88h-2.36v7A10 10 0 0 0 22 12z"/></symbol>
+    <symbol id="icon-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5zM18 6.8a.7.7 0 1 1-.7-.7.7.7 0 0 1 .7.7z"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22s7-6.2 7-13a7 7 0 0 0-14 0c0 6.8 7 13 7 13zm0-9.2A2.8 2.8 0 1 1 14.8 10 2.8 2.8 0 0 1 12 12.8z"/></symbol>
   </svg>
 
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/" aria-label="Aroma Gold Spa – strona główna">
-        <img src="logo.png?v=20260121" alt="Aroma Gold Spa — logo" width="72" height="72" />
-        <div class="name">
-          <span>Aroma Gold SPA Wisła</span>
-          <span>Wisła • ul. Dziechcinka 7</span>
-        </div>
+        <img src="/logo.png?v=20260121" alt="Aroma Gold Spa – logo" width="58" height="58" />
+        <span class="brand-name"><strong>Aroma Gold SPA Wisła</strong><span>ul. Dziechcinka 7 • Wisła</span></span>
       </a>
 
-      <nav class="nav-links" aria-label="Nawigacja">
-        <a href="#opis">Opis</a>
-        <a class="btn nav-cta" href="#uslugi">Oferta & Cennik</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+
+      <nav class="nav-links" id="mainNav" aria-label="Główna nawigacja">
+        <a href="/masaz-wisla/">Masaże</a>
+        <a href="/kobido-wisla/">Kobido</a>
+        <a href="/day-spa-wisla/">Day SPA</a>
+        <a href="#cennik">Cennik</a>
         <a href="#galeria">Galeria</a>
         <a href="#kontakt">Kontakt</a>
-
-        <a href="https://www.facebook.com/profile.php?id=61555564951826" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg class="icon" aria-hidden="true"><use href="#icon-fb"></use></svg>
-        </a>
-        <a href="https://www.instagram.com/aromagold_spa/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg class="icon" aria-hidden="true"><use href="#icon-ig"></use></svg>
-        </a>
+        <a class="nav-cta" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- OPIS -->
     <section class="hero" id="opis">
       <div class="container hero-grid">
         <div class="hero-card">
           <div class="badge">SPA & Kosmetologia w Wiśle • Centrum Green Hill</div>
-          <h1>SPA w Wiśle – masaże, zabiegi i Day SPA</h1>
-
-          <p>
-            Aroma Gold SPA to kameralne SPA i kosmetologia w Wiśle, w którym oferujemy masaże relaksacyjne,
-            zabiegi pielęgnacyjne na twarz i ciało, Kobido oraz pakiety Day SPA dla dwojga.
-            To miejsce stworzone z myślą o relaksie, regeneracji i spokojnym odpoczynku.
+          <h1>SPA w Wiśle – relaks, pielęgnacja i czas dla siebie</h1>
+          <p class="hero-lead">
+            Aroma Gold SPA to kameralne miejsce w Wiśle stworzone z myślą o odpoczynku i regeneracji. Oferujemy masaże relaksacyjne, Kobido, zabiegi pielęgnacyjne na twarz i ciało oraz pakiety Day SPA dla dwojga.
           </p>
-
-          <p style="margin-top:10px">
-            <strong>Zanurz się w świecie relaksu i odnowy.</strong>
+          <p class="hero-lead">
+            Stawiamy na spokojną atmosferę, indywidualne podejście i starannie dobrane rytuały, dzięki którym możesz na chwilę zwolnić i zadbać o siebie.
           </p>
-
-          <p style="margin-top:10px">
-            <strong>Doświadczenie i pasja w jednym miejscu</strong> — nasz zespół składa się z doświadczonych specjalistów,
-            którzy dbają o jakość usług i indywidualne podejście do każdego Gościa.
-          </p>
-
-          <p style="margin-top:10px">
-            <strong>Holistyczne podejście do pielęgnacji ciała</strong> — pracujemy na starannie dobranych produktach i sprawdzonych markach,
-            dbając o komfort podczas każdej wizyty.
-          </p>
-          
           <div class="hero-actions">
-            <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">
-              Rezerwuj (Booksy)
-            </a>
-            <a class="btn secondary" href="#uslugi">Oferta i cennik</a>
-            <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Wis%C5%82a%20ul.%20Dziechcinka%207" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
-              Nawiguj
-            </a>
+            <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj wizytę</a>
+            <a class="btn secondary" href="#oferta">Poznaj ofertę</a>
           </div>
-
-          <div class="note">
-            Tel: <a href="tel:+48516148189">+48 516 148 189</a> •
-            E-mail: <a href="mailto:kontakt@aromagoldspa.pl">kontakt@aromagoldspa.pl</a><br/>
-            Adres: Wisła, ul. Dziechcinka 7 • Godziny: 10:00–20:00
-          </div>
-
-          <div style="height:10px"></div>
-          <div class="social" aria-label="Social media">
-            <a href="https://www.facebook.com/profile.php?id=61555564951826" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#icon-fb"></use></svg> Facebook
-            </a>
-            <a href="https://www.instagram.com/aromagold_spa/" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#icon-ig"></use></svg> Instagram
-            </a>
+          <div class="hero-note">
+            Wisła, ul. Dziechcinka 7 • 10:00–20:00 • <a href="tel:+48516148189">+48 516 148 189</a>
           </div>
         </div>
 
-        <aside class="info-card">
-          <!-- Najważniejsze informacje -->
-          <div>
-            <h3>Najważniejsze informacje</h3>
-            <ul class="list">
-              <li><strong>Adres:</strong> Wisła, ul. Dziechcinka 7</li>
-              <li><strong>Godziny:</strong> 10:00–20:00</li>
-              <li><strong>Rezerwacje:</strong> Booksy</li>
-              <li><strong>Social:</strong> Facebook / Instagram</li>
-            </ul>
-          </div>
-
-          <!-- Opinie (karuzela) -->
-          <div class="reviews-wrap" aria-label="Opinie klientów">
-            <div class="reviews-head">
-              <h3 style="margin:0">Opinie klientów</h3>
-              <div class="stars" aria-label="Oceny">★★★★★</div>
-            </div>
-
-            <div class="review-viewport">
-              <div class="review-track" id="reviewTrack">
-                <div class="review">
-                  <div class="top">
-                    <div class="who">Karolina K. • 5★</div>
-                    <div class="src">Booksy</div>
-                  </div>
-                  <p>„Polecam, najmniej bolesna regulacja brwi w moim życiu :) piękny efekt końcowy, wyszłam zrelaksowana”.</p>
-                </div>
-
-                <div class="review">
-                  <div class="top">
-                    <div class="who">Monika P. • 5★</div>
-                    <div class="src">Booksy</div>
-                  </div>
-                  <p>„Szczerze polecam! &lt;3”.</p>
-                </div>
-
-                <div class="review">
-                  <div class="top">
-                    <div class="who">Anna S. • 5★</div>
-                    <div class="src">Booksy</div>
-                  </div>
-                  <p>„Profesjonalna obsługa i miła atmosfera. Polecam &lt;3”.</p>
-                </div>
-
-                <div class="review">
-                  <div class="top">
-                    <div class="who">Opinia anonimowa • 5★</div>
-                    <div class="src">Booksy</div>
-                  </div>
-                  <p>„Przepięknie, starannie i w bardzo przyjemnej atmosferze.”</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="review-controls" aria-label="Sterowanie opiniami">
-              <button class="rev-btn" type="button" id="revPrev" aria-label="Poprzednia opinia">‹</button>
-              <div class="dots" id="revDots" aria-label="Wybór opinii"></div>
-              <button class="rev-btn" type="button" id="revNext" aria-label="Następna opinia">›</button>
-            </div>
-
-            <div class="review-actions">
-              <a class="btn secondary" style="padding:10px 14px" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#reviews-section" target="_blank" rel="noopener">
-                Więcej opinii na Booksy
-              </a>
-            </div>
-
-            <div class="review-hint">
-             
-            </div>
-          </div>
-
-          <!-- Na jakich kosmetykach pracujemy -->
-          <div>
-            <h3>Na jakich kosmetykach pracujemy?</h3>
-            <p class="small">
-              <strong>Thalgo</strong> — kosmetyki inspirowane bogactwem składników morskich, takich jak algi i minerały, które intensywnie nawilżają, regenerują i odżywiają skórę.
-            </p>
-            <p class="small">
-              <strong>Storyderm</strong> – profesjonalna koreańska marka kosmetyków, łącząca nowoczesne technologie dermatologiczne z wysoką skutecznością pielęgnacyjną.
-            </p>
-            <p class="small">
-              <strong>BioOleo</strong> – naturalna pielęgnacja z siłą olejów, kosmetyki tworzone z myślą o naturalnej pielęgnacji skóry i ciała.
-            </p>
-            <div style="height:10px"></div>
-            <a class="btn secondary" href="#galeria">Zobacz galerię</a>
-          </div>
-        </aside>
+        <div class="hero-photo">
+          <img src="/Galeria1.jpg?v=20260121" alt="Wnętrze Aroma Gold Spa w Wiśle" width="900" height="700" fetchpriority="high" />
+          <div class="caption"><strong>Aroma Gold SPA</strong><br><span>Kameralny relaks w Wiśle</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- OFERTA & CENNIK -->
-    <section class="section" id="uslugi">
+    <section class="section" id="oferta">
       <div class="container">
         <div class="section-title">
-          <div>
-            <h2>Oferta i cennik</h2>
-            <p>Przełącz zakładki — osobno oferta, osobno cennik.</p>
+          <h2>Wybierz swój sposób na relaks</h2>
+          <p>Najważniejsze części oferty mają teraz własne, przejrzyste podstrony. Wybierz usługę, aby zobaczyć szczegóły, ceny i odpowiedzi na najczęstsze pytania.</p>
+        </div>
+        <div class="grid-3">
+          <a class="card service-card" href="/masaz-wisla/">
+            <span class="service-kicker">Relaks i regeneracja</span>
+            <h3>Masaże w Wiśle</h3>
+            <p>Gorące kamienie, masaż świecą, czekoladą, olejem arganowym i aromaterapeutycznym oraz masaże częściowe.</p>
+            <span class="service-link">Zobacz masaże →</span>
+          </a>
+          <a class="card service-card" href="/kobido-wisla/">
+            <span class="service-kicker">Pielęgnacja twarzy</span>
+            <h3>Kobido w Wiśle</h3>
+            <p>Japoński masaż twarzy obejmujący twarz, szyję, dekolt, ramiona i głowę. Rytuał łączący relaks z intensywną pielęgnacją.</p>
+            <span class="service-link">Poznaj Kobido →</span>
+          </a>
+          <a class="card service-card" href="/day-spa-wisla/">
+            <span class="service-kicker">Wspólny odpoczynek</span>
+            <h3>Day SPA dla dwojga</h3>
+            <p>Pakiety łączące strefę wellness z masażami i pielęgnacją. Propozycja na wspólny relaks w kameralnym SPA w Wiśle.</p>
+            <span class="service-link">Zobacz pakiety Day SPA →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="o-nas">
+      <div class="container about-grid">
+        <div class="card">
+          <div class="section-title">
+            <h2>Aroma Gold SPA w Wiśle</h2>
+            <p>Dbamy o to, aby każda wizyta była spokojnym doświadczeniem dopasowanym do potrzeb Gościa.</p>
+          </div>
+          <div class="feature-list">
+            <div class="mini"><strong>Kameralna atmosfera</strong><span>Spokojna przestrzeń do odpoczynku i wyciszenia.</span></div>
+            <div class="mini"><strong>Indywidualne podejście</strong><span>Zabiegi dobieramy z uwzględnieniem komfortu i potrzeb Gościa.</span></div>
+            <div class="mini"><strong>Wygodna rezerwacja</strong><span>Wizyty rezerwujesz online przez Booksy.</span></div>
           </div>
         </div>
-
-        <div class="tabs" role="tablist" aria-label="Zakładki oferta i cennik">
-          <button class="tab-btn" id="tab-oferta" role="tab" aria-selected="true" aria-controls="panel-oferta" type="button">Oferta</button>
-          <button class="tab-btn" id="tab-cennik" role="tab" aria-selected="false" aria-controls="panel-cennik" type="button">Cennik</button>
-        </div>
-
-        <!-- TAB: OFERTA -->
-        <div class="tab-panel" id="panel-oferta" role="tabpanel" aria-labelledby="tab-oferta">
-          <div class="grid-3">
-            <article class="card">
-              <h3>Pielęgnacja twarzy</h3>
-              <p>Kobido, terapie z 24k złotem, peptydy, rytuały nawilżająco-regenerujące.</p>
-              <div class="tag">55–75 min • twarz</div>
-              <a class="seo-link" href="/kobido-wisla/">Kobido w Wiśle →</a>
-            </article>
-
-            <article class="card">
-              <h3>Zabiegi na ciało</h3>
-              <p>Czekoladowa Euforia, Mleczna Odnowa, redukcja tkanki tłuszczowej, peeling całego ciała.</p>
-              <div class="tag">25–80 min • ciało</div>
-            </article>
-
-            <article class="card">
-              <h3>Masaże relaksacyjne</h3>
-              <p>Gorące kamienie bazaltowe, gorąca czekolada, argan, aromaterapia oraz masaże częściowe.</p>
-              <div class="tag">25–50 min • masaż</div>
-              <a class="seo-link" href="/masaz-wisla/">Masaże w Wiśle →</a>
-            </article>
+        <div class="card">
+          <h3>Profesjonalna pielęgnacja</h3>
+          <p>Pracujemy na starannie dobranych markach kosmetycznych wykorzystywanych w zabiegach pielęgnacyjnych i rytuałach SPA.</p>
+          <div class="brands">
+            <span class="brand-pill">Thalgo</span>
+            <span class="brand-pill">Storyderm</span>
+            <span class="brand-pill">BioOleo</span>
           </div>
-
           <div style="height:14px"></div>
-          <div class="cta" id="rezerwacje">
-            <div>
-              <strong>Rezerwacje online</strong>
-              <div class="muted">Kliknij i przejdź do Booksy.</div>
-            </div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap">
-              <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj (Booksy)</a>
-              <button class="btn secondary" type="button" data-switch-tab="cennik">Zobacz cennik</button>
-            </div>
-          </div>
+          <a class="btn secondary" href="#cennik">Zobacz pełny cennik</a>
         </div>
+      </div>
+    </section>
 
-        
-          <div class="day-spa">
-            <h3>Day SPA</h3>
-            <p class="lead">Pakiety dla dwojga — idealne na wspólny relaks w kameralnym SPA.</p>
-            <a class="seo-link" href="/day-spa-wisla/">Day SPA i pakiety dla dwojga w Wiśle →</a>
-
-            <div class="grid-3">
-              <article class="card">
-                <h4>MAŁE CO NIECO DLA DWOJGA</h4>
-                <p>Z daleka od codziennego pędu pozwól sobie na chwile bliskości w naszym kameralnym SPA. Przy dźwiękach relaksacyjnej muzyki oddaj się zapomnieniu i ciesz się chwilami spędzonymi z bliską Ci osobą.</p>
-                <ul>
-                  <li>Intymny wypoczynek w strefie wellness (jacuzzi, łaźnia parowa, sauna sucha, wypoczywalnia z koloroterapią)</li>
-                  <li>Dla Pań: rytuał pielęgnacyjny na twarz – Cold Cream Marine</li>
-                  <li>Dla Panów: masaż na oleju aromatycznym</li>
-                </ul>
-                <div class="day-meta">
-                  <span class="pill">⏱ 2h</span>
-                  <span class="pill day-price"><s>590 zł</s> <strong>480 zł / 2 os.</strong></span>
-                </div>
-              </article>
-
-              <article class="card">
-                <h4>SŁODKO</h4>
-                <p>Poddaj się naszej czekoladowej terapii. To prawdziwy, rozpieszczający ciało i zmysły zastrzyk pozytywnej energii, a jednocześnie ekspresowa rewitalizacja szczególnie suchej i szorstkiej skóry. Skóra pozostanie na bardzo długo gładka.</p>
-                <ul>
-                  <li>Intymny wypoczynek w strefie wellness (jacuzzi, łaźnia parowa, sauna sucha, wypoczywalnia z koloroterapią)</li>
-                  <li>Peeling całego ciała</li>
-                  <li>Masaż gorącą czekoladą</li>
-                  <li>Wmasowanie olejku czekoladowego</li>
-                </ul>
-                <div class="day-meta">
-                  <span class="pill">⏱ 2,5h</span>
-                  <span class="pill day-price"><s>720 zł</s> <strong>590 zł / 2 os.</strong></span>
-                </div>
-              </article>
-
-              <article class="card">
-                <h4>BLISKO SIEBIE</h4>
-                <p>Zmęczenie, przeciągający się stres, szybkie tempo życia sprawiają, że masz czasami ochotę uciec od całego świata i odpocząć. Z dala od zgiełku i pośpiechu, w urokliwym górskim miejscu przygotowaliśmy prawdziwy zastrzyk rewitalizacyjny, który doda Ci sił i energii.</p>
-                <ul>
-                  <li>Intymny wypoczynek w strefie wellness (jacuzzi, łaźnia parowa, sauna sucha, wypoczywalnia z koloroterapią)</li>
-                  <li>Masaż aromaterapeutyczny dla dwojga</li>
-                  <li>Kompleksowa pielęgnacja twarzy dla dwojga</li>
-                </ul>
-                <div class="day-meta">
-                  <span class="pill">⏱ 3h</span>
-                  <span class="pill day-price"><s>1000 zł</s> <strong>720 zł / 2 os.</strong></span>
-                </div>
-              </article>
+    <section class="section" id="opinie">
+      <div class="container">
+        <div class="section-title">
+          <h2>Opinie naszych Gości</h2>
+          <p>Kilka opinii pozostawionych po wizytach w Aroma Gold SPA.</p>
+        </div>
+        <div class="reviews-wrap">
+          <div class="reviews-head"><strong>Booksy</strong><div class="stars" aria-label="Pięć gwiazdek">★★★★★</div></div>
+          <div class="review-viewport">
+            <div class="review-track" id="reviewTrack">
+              <div class="review"><div class="review-top"><span class="review-who">Karolina K. • 5★</span><span class="review-src">Booksy</span></div><p>„Polecam, najmniej bolesna regulacja brwi w moim życiu :) piękny efekt końcowy, wyszłam zrelaksowana”.</p></div>
+              <div class="review"><div class="review-top"><span class="review-who">Monika P. • 5★</span><span class="review-src">Booksy</span></div><p>„Szczerze polecam! &lt;3”.</p></div>
+              <div class="review"><div class="review-top"><span class="review-who">Anna S. • 5★</span><span class="review-src">Booksy</span></div><p>„Profesjonalna obsługa i miła atmosfera. Polecam &lt;3”.</p></div>
+              <div class="review"><div class="review-top"><span class="review-who">Opinia anonimowa • 5★</span><span class="review-src">Booksy</span></div><p>„Przepięknie, starannie i w bardzo przyjemnej atmosferze.”</p></div>
             </div>
           </div>
-
-
-        <!-- TAB: CENNIK -->
-        <div class="tab-panel" id="panel-cennik" role="tabpanel" aria-labelledby="tab-cennik" hidden>
-          <div class="toolbar">
-            <div class="chips" role="group" aria-label="Kategorie cennika">
-              <button class="chip" type="button" data-cat="all" aria-pressed="true">Wszystko</button>
-              <button class="chip" type="button" data-cat="face" aria-pressed="false">Pielęgnacja twarzy</button>
-              <button class="chip" type="button" data-cat="brows" aria-pressed="false">Brwi / rzęsy</button>
-              <button class="chip" type="button" data-cat="handsfeet" aria-pressed="false">Dłonie i stopy</button>
-              <button class="chip" type="button" data-cat="body" aria-pressed="false">Ciało</button>
-              <button class="chip" type="button" data-cat="massage" aria-pressed="false">Masaże</button>
-              <button class="chip" type="button" data-cat="kids" aria-pressed="false">Kids SPA</button>
-            </div>
-
-            <input class="search" id="search" type="search" placeholder="Szukaj: np. 'Kobido', 'czekolada', 'parafina'…" aria-label="Szukaj w cenniku" />
+          <div class="review-controls">
+            <button class="rev-btn" type="button" id="revPrev" aria-label="Poprzednia opinia">‹</button>
+            <div class="dots" id="revDots"></div>
+            <button class="rev-btn" type="button" id="revNext" aria-label="Następna opinia">›</button>
           </div>
+          <div style="margin-top:12px"><a class="btn secondary" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#reviews-section" target="_blank" rel="noopener">Więcej opinii na Booksy</a></div>
+        </div>
+      </div>
+    </section>
 
-          <div class="pricing-wrap">
+    <section class="section" id="cennik">
+      <div class="container">
+        <div class="section-title">
+          <h2>Cennik</h2>
+          <p>Pełna oferta pozostaje dostępna na stronie głównej, ale jest domyślnie zwinięta, aby strona była czytelniejsza.</p>
+        </div>
+        <details class="price-details">
+          <summary>Zobacz pełny cennik zabiegów</summary>
+          <div class="price-content">
+            <div class="toolbar">
+              <div class="chips" role="group" aria-label="Kategorie cennika">
+                <button class="chip" type="button" data-cat="all" aria-pressed="true">Wszystko</button>
+                <button class="chip" type="button" data-cat="face" aria-pressed="false">Twarz</button>
+                <button class="chip" type="button" data-cat="brows" aria-pressed="false">Brwi / rzęsy</button>
+                <button class="chip" type="button" data-cat="handsfeet" aria-pressed="false">Dłonie i stopy</button>
+                <button class="chip" type="button" data-cat="body" aria-pressed="false">Ciało</button>
+                <button class="chip" type="button" data-cat="massage" aria-pressed="false">Masaże</button>
+                <button class="chip" type="button" data-cat="kids" aria-pressed="false">Kids SPA</button>
+              </div>
+              <input class="search" id="search" type="search" placeholder="Szukaj: Kobido, czekolada, parafina…" aria-label="Szukaj w cenniku" />
+            </div>
             <div class="table-scroll">
-            <table aria-label="Cennik zabiegów Aroma Gold Spa">
-              <thead>
-                <tr>
-                  <th>Zabieg</th>
-                  <th>Czas</th>
-                  <th>Cena</th>
-                </tr>
-              </thead>
-
-              <tbody id="pricingBody">
+              <table aria-label="Cennik zabiegów Aroma Gold Spa">
+                <thead><tr><th>Zabieg</th><th>Czas</th><th>Cena</th></tr></thead>
+                <tbody id="pricingBody">
                 <tr data-cat="face">
                   <td><strong>Masaż twarzy KOBIDO</strong><br/><span class="muted">Japoński rytuał liftingująco-pielęgnacyjny: twarz, szyja, dekolt, ramiona i głowa.</span></td>
                   <td class="muted">70 min</td><td class="price">270 zł</td>
@@ -896,348 +476,178 @@
                 <tr data-cat="kids"><td><strong>Kids SPA — Słodka czekolada</strong><br/><span class="muted">Relaksacyjny masaż pleców.</span></td><td class="muted">25 min</td><td class="price">130 zł</td></tr>
                 <tr data-cat="kids"><td><strong>Kids SPA — Soczysta pomarańcza</strong><br/><span class="muted">Relaksacyjny masaż pleców.</span></td><td class="muted">25 min</td><td class="price">130 zł</td></tr>
               </tbody>
-            </table>
+              </table>
             </div>
-
-            <div class="cta" style="margin-top:14px">
-              <div>
-                <strong>Chcesz od razu umówić zabieg?</strong>
-                <div class="muted">Kliknij poniżej — rezerwacje prowadzą do Booksy.</div>
-              </div>
-              <div style="display:flex; gap:10px; flex-wrap:wrap">
-                <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj (Booksy)</a>
-                <a class="btn secondary" href="#kontakt">Kontakt</a>
-              </div>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj w Booksy</a>
+              <a class="btn secondary" href="#kontakt">Kontakt</a>
             </div>
           </div>
-        </div>
+        </details>
       </div>
     </section>
 
-    <!-- GALERIA -->
     <section class="section" id="galeria">
       <div class="container">
-        <div class="section-title gallery-head">
-          <div>
-            <h2>Galeria</h2>
-            <p>Zdjęcia z Aroma Gold Spa.</p>
-          </div>
-          <button class="btn secondary" type="button" id="toggleGallery" aria-expanded="true" aria-controls="galleryPanel">📷 Galeria</button>
+        <div class="section-title">
+          <h2>Galeria</h2>
+          <p>Wybrane zdjęcia z Aroma Gold SPA w Wiśle.</p>
         </div>
-
-        <div id="galleryPanel">
         <div class="gallery">
-          <figure class="photo">
-            <img src="Galeria1.jpg?v=20260121" alt="Wnętrze Aroma Gold Spa w Wiśle — strefa relaksu" loading="lazy">
-            <figcaption class="overlay">
-              <strong>Wnętrze SPA</strong>
-              <span>Strefa relaksu i wyciszenia</span>
-            </figcaption>
-          </figure>
-
-          <figure class="photo">
-            <img src="Galeria2.jpg?v=20260121" alt="Główna kosmetolog Paulina" loading="lazy">
-            <figcaption class="overlay">
-              <strong>Główna kosmetolog Paulina</strong>
-              <span>Doświadczenie • pasja • indywidualne podejście</span>
-            </figcaption>
-          </figure>
-
-          <figure class="photo">
-            <img src="Galeria3.jpg?v=20260121" alt="Kosmetyki Thalgo, na których pracujemy" loading="lazy">
-            <figcaption class="overlay">
-              <strong>Thalgo</strong>
-              <span>Kosmetyki, na których pracujemy</span>
-            </figcaption>
-          </figure>
-          <figure class="photo">
-            <img src="Galeria4.jpg?v=20260121" alt="Gabinet kosmetyczny" loading="lazy">
-            <figcaption class="overlay">
-              <strong>Gabinet kosmetyczny</strong>
-              <span>Komfort i intymność zabiegów</span>
-            </figcaption>
-          </figure>
-
-          <figure class="photo">
-            <img src="Galeria5.jpg?v=20260121" alt="Gabinet masażu w Aroma Gold Spa w Wiśle" loading="lazy">
-            <figcaption class="overlay">
-              <strong>Gabinet masażu</strong>
-              <span>Relaks i odprężenie</span>
-            </figcaption>
-          </figure>
-
-          <figure class="photo">
-            <img src="Galeria6.jpg?v=20260121" alt="Biooleo cosmetics" loading="lazy">
-            <figcaption class="overlay">
-              <strong>Biooleo cosmetics</strong>
-              <span>Wyselekcjonowane produkty</span>
-            </figcaption>
-          </figure>
-
+          <figure class="photo"><img src="/Galeria1.jpg?v=20260121" alt="Strefa relaksu w Aroma Gold Spa w Wiśle" loading="lazy"><figcaption class="overlay"><strong>Wnętrze SPA</strong><span>Strefa relaksu i wyciszenia</span></figcaption></figure>
+          <figure class="photo"><img src="/Galeria4.jpg?v=20260121" alt="Gabinet kosmetyczny Aroma Gold Spa w Wiśle" loading="lazy"><figcaption class="overlay"><strong>Gabinet kosmetyczny</strong><span>Komfort i intymność zabiegów</span></figcaption></figure>
+          <figure class="photo"><img src="/Galeria5.jpg?v=20260121" alt="Gabinet masażu Aroma Gold Spa w Wiśle" loading="lazy"><figcaption class="overlay"><strong>Gabinet masażu</strong><span>Relaks i odprężenie</span></figcaption></figure>
         </div>
-        </div><!-- /#galleryPanel -->
       </div>
     </section>
 
-    <!-- KONTAKT + MAPA -->
     <section class="section" id="kontakt">
       <div class="container cols">
         <div class="card">
-          <h3>Kontakt</h3>
-          <p class="muted">Rezerwacje: Booksy • Szybki kontakt: telefon / e-mail.</p>
-          <div style="height:12px"></div>
-
+          <div class="section-title"><h2>Kontakt</h2><p>Rezerwacje zabiegów prowadzimy przez Booksy. W razie pytań skontaktuj się z nami telefonicznie lub mailowo.</p></div>
           <div class="contact-grid">
-            <div class="card" style="box-shadow:none; background:rgba(255,255,255,.78)">
-              <strong>Telefon</strong><br/>
-              <span class="muted"><a href="tel:+48516148189">+48 516 148 189</a></span>
-            </div>
-            <div class="card" style="box-shadow:none; background:rgba(255,255,255,.78)">
-              <strong>E-mail</strong><br/>
-              <span class="muted"><a href="mailto:kontakt@aromagoldspa.pl">kontakt@aromagoldspa.pl</a></span>
-            </div>
-            <div class="card" style="box-shadow:none; background:rgba(255,255,255,.78)">
-              <strong>Adres</strong><br/>
-              <span class="muted">Wisła, ul. Dziechcinka 7</span><br/>
-              <span class="muted">Godziny: 10:00–20:00</span>
-            </div>
-            <div class="card" style="box-shadow:none; background:rgba(255,255,255,.78)">
-              <strong>Rezerwacje / dojazd</strong><br/>
-              <span class="muted">
-                <a href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Booksy</a>
-                •
-                <a href="https://www.google.com/maps/search/?api=1&query=Wis%C5%82a%20ul.%20Dziechcinka%207" target="_blank" rel="noopener">Nawiguj</a>
-              </span>
-            </div>
+            <div class="contact-item"><strong>Telefon</strong><br><a class="muted" href="tel:+48516148189">+48 516 148 189</a></div>
+            <div class="contact-item"><strong>E-mail</strong><br><a class="muted" href="mailto:kontakt@aromagoldspa.pl">kontakt@aromagoldspa.pl</a></div>
+            <div class="contact-item"><strong>Adres</strong><br><span class="muted">Wisła, ul. Dziechcinka 7</span></div>
+            <div class="contact-item"><strong>Godziny</strong><br><span class="muted">10:00–20:00</span></div>
           </div>
-
-          <div style="height:12px"></div>
-          <div class="social" aria-label="Social media">
-            <a href="https://www.facebook.com/profile.php?id=61555564951826" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#icon-fb"></use></svg> Facebook
-            </a>
-            <a href="https://www.instagram.com/aromagold_spa/" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#icon-ig"></use></svg> Instagram
-            </a>
+          <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61555564951826" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-fb"></use></svg> Facebook</a>
+            <a href="https://www.instagram.com/aromagold_spa/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-ig"></use></svg> Instagram</a>
           </div>
-
-          <div style="height:12px"></div>
-          <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj (Booksy)</a>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj (Booksy)</a>
+            <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Wis%C5%82a%20ul.%20Dziechcinka%207" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg> Nawiguj</a>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Mapa</h3>
-          <p class="muted">Wisła, ul. Dziechcinka 7</p>
+          <h3>Jak do nas trafić?</h3>
+          <p class="muted">Aroma Gold SPA • Wisła, ul. Dziechcinka 7</p>
           <div style="height:10px"></div>
-
-          <div class="map" aria-label="Mapa Google">
-            <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Wis%C5%82a%20Dziechcinka%207&output=embed"></iframe>
-          </div>
-
-          <div style="height:12px"></div>
-          <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Wis%C5%82a%20ul.%20Dziechcinka%207" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
-            Otwórz w Google Maps
-          </a>
+          <div class="map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Aroma Gold Spa w Wiśle" src="https://www.google.com/maps?q=Wis%C5%82a%20Dziechcinka%207&output=embed"></iframe></div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
-        <div>© 2026 Aroma Gold Spa • Stronę stworzył Przemek Szalbót</div>
-        <div class="service-links" aria-label="Najważniejsze usługi">
-          <a href="/masaz-wisla/">Masaże w Wiśle</a>
-          <a href="/kobido-wisla/">Kobido w Wiśle</a>
-          <a href="/day-spa-wisla/">Day SPA w Wiśle</a>
-        </div>
-        <div class="social" aria-label="Social media w stopce">
-          <a href="https://www.facebook.com/profile.php?id=61555564951826" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#icon-fb"></use></svg> Facebook
-          </a>
-          <a href="https://www.instagram.com/aromagold_spa/" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#icon-ig"></use></svg> Instagram
-          </a>
-        </div>
+    <div class="container footer-inner">
+      <div>© 2026 Aroma Gold Spa • Stronę stworzył Przemek Szalbót</div>
+      <div class="footer-links">
+        <a href="/masaz-wisla/">Masaże</a>
+        <a href="/kobido-wisla/">Kobido</a>
+        <a href="/day-spa-wisla/">Day SPA</a>
+        <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Tabs (Oferta / Cennik)
-    const tabOferta = document.getElementById("tab-oferta");
-    const tabCennik = document.getElementById("tab-cennik");
-    const panelOferta = document.getElementById("panel-oferta");
-    const panelCennik = document.getElementById("panel-cennik");
-
-    function showTab(which){
-      const isOferta = which === "oferta";
-      tabOferta.setAttribute("aria-selected", String(isOferta));
-      tabCennik.setAttribute("aria-selected", String(!isOferta));
-      panelOferta.hidden = !isOferta;
-      panelCennik.hidden = isOferta;
-      const target = (which === "cennik" && window.matchMedia("(max-width: 980px)").matches)
-        ? document.querySelector("#panel-cennik .table-scroll") || panelCennik
-        : document.getElementById("uslugi");
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    tabOferta.addEventListener("click", () => showTab("oferta"));
-    tabCennik.addEventListener("click", () => showTab("cennik"));
-    document.querySelectorAll('[data-switch-tab="cennik"]').forEach(btn => {
-      btn.addEventListener("click", () => showTab("cennik"));
+    // Menu mobilne
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle?.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
     });
+    mainNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded','false');
+    }));
+
+    // Otwórz cennik po wejściu z menu / kotwicy
+    const priceDetails = document.querySelector('.price-details');
+    document.querySelectorAll('a[href="#cennik"]').forEach(a => a.addEventListener('click', () => {
+      if(priceDetails) priceDetails.open = true;
+    }));
 
     // Filtry + wyszukiwarka cennika
-    const chips = Array.from(document.querySelectorAll(".chip"));
-    const search = document.getElementById("search");
-    const rows = Array.from(document.querySelectorAll("#pricingBody tr"));
-    let activeCat = "all";
-
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    const searchInput = document.getElementById('search');
+    const rows = Array.from(document.querySelectorAll('#pricingBody tr'));
+    let activeCat = 'all';
     function applyFilters(){
-      const q = (search.value || "").trim().toLowerCase();
+      const q = (searchInput?.value || '').trim().toLowerCase();
       rows.forEach(row => {
-        const cat = row.getAttribute("data-cat");
+        const cat = row.getAttribute('data-cat');
         const text = row.innerText.toLowerCase();
-        const okCat = (activeCat === "all") || (cat === activeCat);
-        const okText = !q || text.includes(q);
-        row.style.display = (okCat && okText) ? "" : "none";
+        row.style.display = ((activeCat === 'all' || cat === activeCat) && (!q || text.includes(q))) ? '' : 'none';
       });
     }
+    chips.forEach(chip => chip.addEventListener('click', () => {
+      chips.forEach(c => c.setAttribute('aria-pressed','false'));
+      chip.setAttribute('aria-pressed','true');
+      activeCat = chip.getAttribute('data-cat');
+      applyFilters();
+    }));
+    searchInput?.addEventListener('input', applyFilters);
 
-    chips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        chips.forEach(c => c.setAttribute("aria-pressed", "false"));
-        chip.setAttribute("aria-pressed", "true");
-        activeCat = chip.getAttribute("data-cat");
-        applyFilters();
-      });
-    });
-    if (search) search.addEventListener("input", applyFilters);
-
-    // --- Opinie: karuzela ---
-    const track = document.getElementById("reviewTrack");
-    const slides = Array.from(track.children);
-    const btnPrev = document.getElementById("revPrev");
-    const btnNext = document.getElementById("revNext");
-    const dotsWrap = document.getElementById("revDots");
-
+    // Opinie
+    const track = document.getElementById('reviewTrack');
+    const slides = track ? Array.from(track.children) : [];
+    const btnPrev = document.getElementById('revPrev');
+    const btnNext = document.getElementById('revNext');
+    const dotsWrap = document.getElementById('revDots');
     let idx = 0;
     let timer = null;
     const intervalMs = 5500;
-
     function renderDots(){
-      dotsWrap.innerHTML = "";
-      slides.forEach((_, i) => {
-        const d = document.createElement("button");
-        d.type = "button";
-        d.className = "dot";
-        d.setAttribute("aria-label", "Opinia " + (i + 1));
-        d.setAttribute("aria-current", String(i === idx));
-        d.addEventListener("click", () => { goTo(i); restart(); });
+      if(!dotsWrap) return;
+      dotsWrap.innerHTML = '';
+      slides.forEach((_,i) => {
+        const d = document.createElement('button');
+        d.type='button'; d.className='dot'; d.setAttribute('aria-label','Opinia '+(i+1));
+        d.setAttribute('aria-current',String(i===idx));
+        d.addEventListener('click',()=>{goTo(i);restart();});
         dotsWrap.appendChild(d);
       });
     }
-
     function goTo(i){
-      idx = (i + slides.length) % slides.length;
-      track.style.transform = `translateX(-${idx * 100}%)`;
-      Array.from(dotsWrap.children).forEach((d, j) => d.setAttribute("aria-current", String(j === idx)));
+      if(!track || !slides.length) return;
+      idx=(i+slides.length)%slides.length;
+      track.style.transform=`translateX(-${idx*100}%)`;
+      Array.from(dotsWrap?.children || []).forEach((d,j)=>d.setAttribute('aria-current',String(j===idx)));
     }
+    function next(){goTo(idx+1)}
+    function prev(){goTo(idx-1)}
+    function stop(){if(timer) clearInterval(timer);timer=null;}
+    function start(){if(slides.length>1) timer=setInterval(next,intervalMs);}
+    function restart(){stop();start();}
+    btnNext?.addEventListener('click',()=>{next();restart();});
+    btnPrev?.addEventListener('click',()=>{prev();restart();});
+    track?.parentElement?.addEventListener('mouseenter',stop);
+    track?.parentElement?.addEventListener('mouseleave',start);
+    renderDots(); goTo(0); start();
 
-    function next(){ goTo(idx + 1); }
-    function prev(){ goTo(idx - 1); }
-
-    function start(){
-      timer = setInterval(() => next(), intervalMs);
-    }
-    function stop(){
-      if (timer) clearInterval(timer);
-      timer = null;
-    }
-    function restart(){
-      stop();
-      start();
-    }
-
-    btnNext.addEventListener("click", () => { next(); restart(); });
-    btnPrev.addEventListener("click", () => { prev(); restart(); });
-
-    // pauza przy najechaniu (desktop)
-  
-    // Galeria: show/hide (bez zmiany wyglądu — tylko zwijanie)
-    const toggleGalleryBtn = document.getElementById("toggleGallery");
-    const galleryPanel = document.getElementById("galleryPanel");
-    if(toggleGalleryBtn && galleryPanel){
-      // na telefonie domyślnie zwinięta
-      if(window.matchMedia("(max-width: 980px)").matches){
-        galleryPanel.hidden = true;
-        toggleGalleryBtn.setAttribute("aria-expanded","false");
-      }
-      toggleGalleryBtn.addEventListener("click", () => {
-        const isHidden = galleryPanel.hidden;
-        galleryPanel.hidden = !isHidden;
-        toggleGalleryBtn.setAttribute("aria-expanded", String(isHidden));
-        if(isHidden){
-          galleryPanel.scrollIntoView({behavior:"smooth", block:"start"});
-        }
-      });
-    }
-
-    // Lightbox dla zdjęć galerii
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightboxImg");
-    const lightboxTitle = document.getElementById("lightboxTitle");
-    const lightboxClose = document.getElementById("lightboxClose");
-
-    function openLightbox(src, title, alt){
-      if(!lightbox) return;
-      lightboxImg.src = src;
-      lightboxImg.alt = alt || title || "Zdjęcie";
-      lightboxTitle.textContent = title || "Zdjęcie";
-      lightbox.classList.add("open");
-      lightbox.setAttribute("aria-hidden","false");
-    }
+    // Lightbox galerii
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
     function closeLightbox(){
-      if(!lightbox) return;
-      lightbox.classList.remove("open");
-      lightbox.setAttribute("aria-hidden","true");
-      lightboxImg.src = "";
+      lightbox?.classList.remove('open');
+      lightbox?.setAttribute('aria-hidden','true');
+      if(lightboxImg) lightboxImg.src='';
     }
-    lightboxClose?.addEventListener("click", closeLightbox);
-    lightbox?.addEventListener("click", (e) => { if(e.target === lightbox) closeLightbox(); });
-    window.addEventListener("keydown", (e) => { if(e.key === "Escape") closeLightbox(); });
-
-    document.querySelectorAll("#galeria .photo img").forEach(img => {
-      img.addEventListener("click", (e) => {
-        e.preventDefault();
-        const fig = img.closest("figure");
-        const cap = fig?.querySelector(".overlay strong")?.textContent?.trim() || "";
-        openLightbox(img.currentSrc || img.src, cap, img.alt);
-      });
-    });
-  const viewport = track.parentElement;
-    viewport.addEventListener("mouseenter", stop);
-    viewport.addEventListener("mouseleave", start);
-
-    renderDots();
-    goTo(0);
-    start();
+    document.querySelectorAll('#galeria .photo img').forEach(img => img.addEventListener('click', () => {
+      const fig = img.closest('figure');
+      if(lightboxImg){lightboxImg.src=img.currentSrc||img.src;lightboxImg.alt=img.alt;}
+      if(lightboxTitle) lightboxTitle.textContent=fig?.querySelector('.overlay strong')?.textContent?.trim() || 'Zdjęcie';
+      lightbox?.classList.add('open');
+      lightbox?.setAttribute('aria-hidden','false');
+    }));
+    document.getElementById('lightboxClose')?.addEventListener('click',closeLightbox);
+    lightbox?.addEventListener('click',e=>{if(e.target===lightbox) closeLightbox();});
+    window.addEventListener('keydown',e=>{if(e.key==='Escape') closeLightbox();});
   </script>
 
-  <!-- Lightbox (powiększenie zdjęć) -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox-card" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
-      <div class="lightbox-bar">
-        <div id="lightboxTitle">Zdjęcie</div>
-        <button class="lightbox-close" type="button" id="lightboxClose">Zamknij ✕</button>
-      </div>
-      <img id="lightboxImg" alt="">
+      <div class="lightbox-bar"><div id="lightboxTitle">Zdjęcie</div><button class="lightbox-close" type="button" id="lightboxClose">Zamknij ✕</button></div>
+      <img id="lightboxImg" alt="" />
     </div>
   </div>
+
 <!-- Cookie banner (PRO) - wklej przed </body> -->
 <div id="cookie-consent" style="display:none;">
   <div id="cookie-backdrop" aria-hidden="true"></div>
@@ -1499,6 +909,7 @@
   
 </body>
 </html>
+
 
 
 
