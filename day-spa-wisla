@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day SPA Wisła – pakiety SPA dla dwojga | Aroma Gold Spa</title>
+  <meta name="description" content="Day SPA w Wiśle dla dwojga. Pakiety z wellness, masażami i pielęgnacją w Aroma Gold Spa. Sprawdź pakiety Małe co nieco, Słodko i Blisko siebie." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.aromagoldspa.pl/day-spa-wisla/" />
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Aroma Gold Spa" />
+  <meta property="og:title" content="Day SPA Wisła – pakiety SPA dla dwojga | Aroma Gold Spa" />
+  <meta property="og:description" content="Day SPA w Wiśle dla dwojga. Pakiety z wellness, masażami i pielęgnacją w Aroma Gold Spa. Sprawdź pakiety Małe co nieco, Słodko i Blisko siebie." />
+  <meta property="og:url" content="https://www.aromagoldspa.pl/day-spa-wisla/" />
+  <meta property="og:image" content="https://www.aromagoldspa.pl/Galeria1.jpg" />
+  <meta property="og:image:alt" content="Aroma Gold Spa w Wiśle" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Day SPA Wisła – pakiety SPA dla dwojga | Aroma Gold Spa" />
+  <meta name="twitter:description" content="Day SPA w Wiśle dla dwojga. Pakiety z wellness, masażami i pielęgnacją w Aroma Gold Spa. Sprawdź pakiety Małe co nieco, Słodko i Blisko siebie." />
+  <meta name="twitter:image" content="https://www.aromagoldspa.pl/Galeria1.jpg" />
+
+  <style>
+    :root{
+      --bg:#fbf2ee;
+      --surface:#fffaf7;
+      --surface2:#fff2ed;
+
+      --text:#3b2b25;
+      --muted:#7a5f56;
+      --line:rgba(59,43,37,.12);
+
+      --accent:#c7a27a;
+      --accent2:#d7b8b1;
+      --accent3:#b58a6e;
+
+      --shadow:0 18px 45px rgba(59,43,37,.12);
+      --radius:18px;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html,body{overflow-x:hidden}
+    *{min-width:0}
+    img,svg,iframe{max-width:100%}
+    body{
+      margin:0;
+      font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 520px at 80% -10%, rgba(215,184,177,.55), transparent 60%),
+        radial-gradient(900px 520px at 10% 10%, rgba(199,162,122,.35), transparent 60%),
+        var(--bg);
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(150%) blur(10px);
+      background:rgba(251,242,238,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:14px}
+    .brand{
+      display:flex;align-items:center;gap:14px;
+      font-weight:800;letter-spacing:.2px;min-width:260px;
+    }
+    .brand img{
+      width:72px;height:72px;border-radius:18px;object-fit:cover;
+      border:1px solid rgba(59,43,37,.10);
+      background:#fff;
+      box-shadow:0 14px 30px rgba(59,43,37,.12);
+    }
+    .brand .name{display:flex;flex-direction:column;line-height:1.08}
+    .brand .name span:first-child{font-size:16px}
+    .brand .name span:last-child{font-size:12px;color:var(--muted);font-weight:650;margin-top:6px}
+
+    .nav-links{
+      display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;align-items:center;
+    }
+    .nav-links a{
+      color:var(--muted);
+      padding:8px 10px;border-radius:12px;
+      transition:.18s ease;border:1px solid transparent;font-weight:650;
+    }
+    .nav-links a:hover{
+      color:var(--text);
+      background:rgba(199,162,122,.12);
+      border-color:rgba(199,162,122,.22);
+    }
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:14px;
+      border:1px solid rgba(199,162,122,.45);
+      background:linear-gradient(135deg, rgba(199,162,122,.26), rgba(215,184,177,.22));
+      color:var(--text);
+      box-shadow:0 12px 26px rgba(59,43,37,.10);
+      transition:transform .16s ease,border-color .16s ease,background .16s ease;
+      cursor:pointer;font-weight:800;white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px);border-color:rgba(181,138,110,.55)}
+    .btn.secondary{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.65);
+      box-shadow:none;font-weight:800;
+    }
+    .btn.secondary:hover{background:rgba(255,255,255,.9)}
+    .btn.nav-cta{
+      padding:10px 14px;
+      border-radius:999px;
+    }
+
+    /* Icons */
+    .icon{width:16px;height:16px;display:inline-block;vertical-align:-3px}
+
+    .social{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .social a{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid rgba(181,138,110,.22);
+      background:rgba(255,255,255,.72);
+      color:var(--muted);
+      font-weight:800;font-size:14px;
+      transition:.15s ease;
+    }
+    .social a:hover{background:rgba(215,184,177,.20);border-color:rgba(181,138,110,.35);color:var(--text)}
+
+    /* HERO */
+    .hero{padding:52px 0 22px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .brand{min-width:unset}
+      .brand img{width:62px;height:62px}
+    }
+
+    .hero-card{
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:
+        radial-gradient(900px 420px at 15% 0%, rgba(215,184,177,.55), transparent 60%),
+        rgba(255,255,255,.78);
+      box-shadow:var(--shadow);
+      padding:26px;
+    }
+    .badge{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:7px 12px;border-radius:999px;
+      border:1px solid rgba(181,138,110,.30);
+      background:rgba(215,184,177,.18);
+      font-weight:850;letter-spacing:.2px;margin-bottom:14px;
+    }
+    .hero h1{
+      margin:0 0 10px;
+      font-size:clamp(28px, 4vw, 46px);
+      line-height:1.08;letter-spacing:-.5px;
+    }
+    .hero p{margin:0 0 12px;color:var(--muted);max-width:75ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .note{font-size:13px;color:var(--muted);margin-top:12px}
+
+    .info-card{
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.75);
+      box-shadow:var(--shadow);
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    .info-card h3{margin:0 0 10px;font-size:18px}
+    .list{margin:0;padding-left:18px;color:var(--muted)}
+    .list li{margin:8px 0}
+    .small{color:var(--muted);font-size:14px}
+
+    /* SECTIONS */
+    .section{padding:26px 0}
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 14px}
+    .section-title h2{margin:0;font-size:26px;letter-spacing:-.2px}
+    .section-title p{margin:0;color:var(--muted);max-width:74ch}
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.75);
+      padding:18px;
+      box-shadow:0 16px 36px rgba(59,43,37,.10);
+    }
+    .card h3{margin:0 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width: 980px){ .grid-3{grid-template-columns:1fr} }
+
+    .tag{
+      display:inline-flex;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(181,138,110,.22);
+      background:rgba(215,184,177,.18);
+      color:var(--muted);
+      font-size:13px;margin-top:10px;font-weight:750;
+    }
+
+    /* CTA */
+    .cta{
+      border:1px solid rgba(181,138,110,.22);
+      background:
+        radial-gradient(800px 260px at 20% 0%, rgba(215,184,177,.40), transparent 60%),
+        rgba(255,255,255,.76);
+      border-radius:24px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .cta strong{font-size:18px}
+
+    /* TABS: Oferta / Cennik */
+    .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}
+    .tab-btn{
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.86);
+      color:var(--muted);
+      font-weight:950;
+      cursor:pointer;
+      transition:.15s ease;
+      box-shadow:0 10px 22px rgba(59,43,37,.07);
+    }
+    .tab-btn[aria-selected="true"]{
+      color:var(--text);
+      border-color:rgba(181,138,110,.45);
+      background:rgba(215,184,177,.26);
+    }
+    .tab-panel[hidden]{display:none!important}
+
+    /* PRICING */
+    .pricing-wrap{display:grid;grid-template-columns:1fr;gap:12px}
+    .table-scroll{overflow:auto;-webkit-overflow-scrolling:touch;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,85)}
+    .table-scroll table{min-width:720px}
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:12px 0 10px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{
+      padding:8px 12px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.75);
+      color:var(--muted);
+      cursor:pointer;
+      transition:.15s ease;
+      font-weight:900;
+      font-size:14px;
+    }
+    .chip[aria-pressed="true"]{
+      color:var(--text);
+      border-color:rgba(181,138,110,.38);
+      background:rgba(215,184,177,.22);
+    }
+    .search{
+      width:min(420px, 100%);
+      padding:10px 12px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.85);
+      color:var(--text);
+      outline:none;
+    }
+
+    table{
+      width:100%;
+      border-collapse:separate;border-spacing:0;
+      overflow:hidden;border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.78);
+      box-shadow:0 16px 36px rgba(59,43,37,.10);
+    }
+    th,td{padding:14px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{
+      font-size:13px;text-transform:uppercase;letter-spacing:.08em;
+      color:var(--muted);
+      background:rgba(255,255,255,.75);
+    }
+    tr:last-child td{border-bottom:none}
+    .price{white-space:nowrap;font-weight:900}
+    .muted{color:var(--muted)}
+
+    /* REVIEWS CAROUSEL */
+    .reviews-wrap{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.78);
+      padding:14px;
+    }
+    .reviews-head{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .stars{letter-spacing:.08em;font-weight:900;color:#a57c5f}
+    .review-viewport{
+      position:relative;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(59,43,37,.10);
+      background:rgba(255,255,255,.65);
+    }
+    .review-track{
+      display:flex;
+      transition: transform .35s ease;
+      will-change: transform;
+    }
+    .review{
+      min-width:100%;
+      padding:14px;
+    }
+    .review .top{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    }
+    .review .who{
+      font-weight:950;
+      color:var(--text);
+    }
+    .review .src{
+      font-size:12px;
+      color:var(--muted);
+      font-weight:900;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid rgba(181,138,110,.22);
+      background:rgba(215,184,177,.14);
+      white-space:nowrap;
+    }
+    .review p{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .review-controls{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      margin-top:10px;
+    }
+    .rev-btn{
+      width:38px;height:38px;
+      display:inline-flex;align-items:center;justify-content:center;
+      border-radius:12px;
+      border:1px solid rgba(181,138,110,.25);
+      background:rgba(255,255,255,.82);
+      cursor:pointer;
+      font-weight:950;
+      color:var(--muted);
+      transition:.15s ease;
+    }
+    .rev-btn:hover{
+      background:rgba(215,184,177,.18);
+      color:var(--text);
+      border-color:rgba(181,138,110,.35);
+    }
+    .dots{display:flex;gap:6px;align-items:center;justify-content:center;flex:1}
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      border:1px solid rgba(181,138,110,.35);
+      background:rgba(181,138,110,.10);
+      cursor:pointer;
+    }
+    .dot[aria-current="true"]{
+      background:rgba(181,138,110,.55);
+    }
+    .review-actions{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;
+    }
+    .review-hint{font-size:12px;color:var(--muted);margin-top:8px}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width: 980px){ .gallery{grid-template-columns:1fr} }
+    .photo{
+      position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line);
+      box-shadow:0 16px 36px rgba(59,43,37,.10);
+      background:rgba(255,255,255,.78);
+      min-height:260px;
+    }
+    .photo img{
+      width:100%;height:100%;display:block;object-fit:cover;
+      transform:scale(1.02);
+      transition:transform .35s ease;
+      filter:saturate(1.02) contrast(1.02);
+    }
+    .photo:hover img{transform:scale(1.06)}
+    .overlay{
+      position:absolute;inset:auto 0 0 0;
+      padding:14px 14px 12px;
+      background:linear-gradient(180deg, transparent, rgba(59,43,37,.60));
+      color:#fff;
+    }
+    .overlay strong{display:block;font-size:16px;letter-spacing:.2px}
+    .overlay span{display:block;font-size:13px;opacity:.92;margin-top:4px}
+
+    /* CONTACT + MAP */
+    .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}
+    @media (max-width: 900px){ .cols{grid-template-columns:1fr} }
+    .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width: 700px){ .contact-grid{grid-template-columns:1fr} }
+
+    .map{
+      border:1px solid var(--line);
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 16px 36px rgba(59,43,37,.10);
+      background:rgba(255,255,255,.78);
+    }
+    .map iframe{width:100%;height:320px;border:0;display:block}
+
+    /* Footer */
+    .footer{
+      margin-top:28px;
+      border-top:1px solid var(--line);
+      padding:20px 0 34px;
+      color:var(--muted);
+      background:rgba(255,255,255,.45);
+    }
+  
+    /* MOBILE FIX: iPhone — początek strony bez "wyjeżdżania" */
+    @media (max-width: 520px){
+      .container{padding:0 14px}
+      .nav-inner{flex-wrap:wrap}
+      .brand{min-width:unset}
+      .nav-links{width:100%;justify-content:flex-start}
+      .btn{white-space:normal}
+      .hero-actions{flex-direction:column;align-items:stretch}
+      .hero-actions .btn{width:100%}
+      .note{overflow-wrap:anywhere;word-break:break-word}
+    }
+
+  
+    /* DAY SPA (dodatkowe kafelki w Ofercie) */
+    .day-spa{margin-top:18px}
+    .day-spa h3{margin:0 0 10px;font-family:var(--serif);font-size:22px}
+    .day-spa .lead{margin:0 0 14px;color:var(--muted);font-weight:650}
+    .day-spa .card h4{margin:0 0 8px;font-family:var(--serif);font-size:18px}
+    .day-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center;color:var(--muted);font-weight:750}
+    .day-meta .pill{padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .day-price s{opacity:.7}
+    .day-price strong{color:var(--text)}
+    .day-spa ul{margin:0;padding-left:18px}
+    .day-spa li{margin:6px 0}
+
+    /* Galeria: toggle panel */
+    .gallery-head{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+
+    /* Lightbox (powiększenie zdjęcia po kliknięciu) */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:18px;z-index:2000}
+    .lightbox.open{display:flex}
+    .lightbox-card{max-width:980px;width:100%;background:#111;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.12)}
+    .lightbox-card img{width:100%;height:auto;display:block}
+    .lightbox-bar{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 14px;color:#fff;font-weight:800;background:rgba(0,0,0,.35)}
+    .lightbox-close{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:999px;padding:10px 12px;cursor:pointer;font-weight:900}
+
+    @media(max-width:980px){
+      .day-spa h3{font-size:20px}
+    }
+
+  
+
+    /* PODSTRONY SEO */
+    .brand{color:inherit}
+    .breadcrumbs{font-size:14px;color:var(--muted);margin-bottom:12px}
+    .breadcrumbs a{text-decoration:underline;text-underline-offset:3px}
+    .service-price{font-size:20px;font-weight:950;margin-top:12px;color:var(--text)}
+    .service-card ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+    .service-card li{margin:6px 0}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:900px){.faq-grid{grid-template-columns:1fr}}
+    .page-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .page-links a{text-decoration:underline;text-underline-offset:3px;font-weight:800;color:var(--accent3)}
+    .service-hero-copy{font-size:17px}
+
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="icon-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22s7-6.2 7-13a7 7 0 0 0-14 0c0 6.8 7 13 7 13zm0-9.2A2.8 2.8 0 1 1 14.8 10 2.8 2.8 0 0 1 12 12.8z"/></symbol>
+  </svg>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Aroma Gold Spa – strona główna">
+        <img src="/logo.png?v=20260121" alt="Aroma Gold Spa — logo" width="72" height="72" />
+        <div class="name"><span>Aroma Gold SPA Wisła</span><span>Wisła • ul. Dziechcinka 7</span></div>
+      </a>
+      <nav class="nav-links" aria-label="Nawigacja">
+        <a href="/">Start</a>
+        <a href="/masaz-wisla/">Masaże</a>
+        <a href="/kobido-wisla/">Kobido</a>
+        <a href="/day-spa-wisla/">Day SPA</a>
+        <a href="/#uslugi">Oferta i cennik</a>
+        <a class="btn nav-cta" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="/">Aroma Gold Spa</a> → Day SPA w Wiśle – pakiety dla dwojga</div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="badge">SPA & Kosmetologia w Wiśle • Centrum Green Hill</div>
+          <h1>Day SPA w Wiśle – pakiety dla dwojga</h1>
+          <p class="service-hero-copy">Pakiety Day SPA w Aroma Gold Spa łączą wspólny wypoczynek w strefie wellness z masażami i zabiegami pielęgnacyjnymi. To propozycja na spokojny czas we dwoje w Wiśle.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj (Booksy)</a>
+            <a class="btn secondary" href="/#uslugi">Pełna oferta i cennik</a>
+            <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Wis%C5%82a%20ul.%20Dziechcinka%207" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>Nawiguj</a>
+          </div>
+          <div class="note">Tel: <a href="tel:+48516148189">+48 516 148 189</a> • E-mail: <a href="mailto:kontakt@aromagoldspa.pl">kontakt@aromagoldspa.pl</a><br>Wisła, ul. Dziechcinka 7 • Godziny: 10:00–20:00</div>
+        </div>
+        <aside class="info-card">
+          <h2 style="margin:0;font-size:22px">Aroma Gold Spa w Wiśle</h2>
+          <ul class="list">
+            <li><strong>Adres:</strong> Wisła, ul. Dziechcinka 7</li>
+            <li><strong>Godziny:</strong> 10:00–20:00</li>
+            <li><strong>Rezerwacje:</strong> Booksy</li>
+            <li><strong>Informacja:</strong> Rezerwacje wyłącznie po wcześniejszym umówieniu wizyty.</li>
+          </ul>
+          <div class="page-links">
+            <a href="/masaz-wisla/">Masaże</a>
+            <a href="/kobido-wisla/">Kobido</a>
+            <a href="/day-spa-wisla/">Day SPA</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><div><h2>Pakiety Day SPA dla dwojga</h2><p>Wybierz pakiet najlepiej dopasowany do czasu, jaki chcecie przeznaczyć na wspólny relaks.</p></div></div>
+        <div class="grid-3">
+          <article class="card service-card"><h3>MAŁE CO NIECO DLA DWOJGA</h3><ul><li>Intymny wypoczynek w strefie wellness: jacuzzi, łaźnia parowa, sauna sucha i wypoczywalnia z koloroterapią</li><li>Dla Pań: rytuał pielęgnacyjny na twarz – Cold Cream Marine</li><li>Dla Panów: masaż na oleju aromatycznym</li></ul><div class="service-price"><s style="opacity:.65">590 zł</s> &nbsp; 480 zł / 2 os.</div><div class="tag">2h • 2 osoby</div></article>
+          <article class="card service-card"><h3>SŁODKO</h3><ul><li>Intymny wypoczynek w strefie wellness: jacuzzi, łaźnia parowa, sauna sucha i wypoczywalnia z koloroterapią</li><li>Peeling całego ciała</li><li>Masaż gorącą czekoladą</li><li>Wmasowanie olejku czekoladowego</li></ul><div class="service-price"><s style="opacity:.65">720 zł</s> &nbsp; 590 zł / 2 os.</div><div class="tag">2,5h • 2 osoby</div></article>
+          <article class="card service-card"><h3>BLISKO SIEBIE</h3><ul><li>Intymny wypoczynek w strefie wellness: jacuzzi, łaźnia parowa, sauna sucha i wypoczywalnia z koloroterapią</li><li>Masaż aromaterapeutyczny dla dwojga</li><li>Kompleksowa pielęgnacja twarzy dla dwojga</li></ul><div class="service-price"><s style="opacity:.65">1000 zł</s> &nbsp; 720 zł / 2 os.</div><div class="tag">3h • 2 osoby</div></article>
+        </div>
+        <div class="cta" style="margin-top:16px"><div><strong>Chcesz zarezerwować pakiet?</strong><div class="muted">Sprawdź dostępne terminy w Booksy.</div></div><a class="btn" href="https://booksy.com/pl-pl/258271_aroma-gold-spa_salon-kosmetyczny_12765_wisla#ba_s=seo" target="_blank" rel="noopener">Rezerwuj (Booksy)</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><div><h2>Najczęściej zadawane pytania</h2></div></div>
+        <div class="faq-grid">
+          <div class="card"><h3>Co obejmuje strefa wellness?</h3><p>W pakietach znajduje się wypoczynek w strefie wellness z jacuzzi, łaźnią parową, sauną suchą i wypoczywalnią z koloroterapią.</p></div>
+          <div class="card"><h3>Ile trwają pakiety?</h3><p>W zależności od wybranego pakietu pobyt trwa od 2 do 3 godzin.</p></div>
+          <div class="card"><h3>Czy pakiety są dla dwóch osób?</h3><p>Tak. Przedstawione pakiety Day SPA zostały przygotowane dla dwóch osób.</p></div>
+          <div class="card"><h3>Jak zarezerwować Day SPA?</h3><p>Pakiet możesz zarezerwować online przez Booksy. Wcześniejsza rezerwacja jest wymagana.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+        <div>© 2026 Aroma Gold Spa • Wisła, ul. Dziechcinka 7</div>
+        <div class="page-links">
+          <a href="/masaz-wisla/">Masaże</a>
+          <a href="/kobido-wisla/">Kobido</a>
+          <a href="/day-spa-wisla/">Day SPA</a>
+          <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- Cookie banner (PRO) - wklej przed </body> -->
+<div id="cookie-consent" style="display:none;">
+  <div id="cookie-backdrop" aria-hidden="true"></div>
+
+  <div id="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+    <div class="cookie-header">
+      <div>
+        <div id="cookie-title" class="cookie-title">Ustawienia plików cookies</div>
+        <div id="cookie-desc" class="cookie-desc">
+          Używamy cookies, aby strona działała poprawnie oraz (opcjonalnie) do analityki i marketingu.
+          Możesz zaakceptować wszystkie, odrzucić lub wybrać ustawienia.
+        </div>
+      </div>
+      <button class="cookie-x" type="button" aria-label="Zamknij" id="cookie-close">×</button>
+    </div>
+
+    <div class="cookie-body">
+      <div class="cookie-cats">
+        <label class="cookie-row">
+          <div>
+            <div class="cookie-cat-title">Niezbędne (zawsze aktywne)</div>
+            <div class="cookie-cat-desc">Wymagane do działania strony i zapisania Twoich ustawień.</div>
+          </div>
+          <div class="cookie-pill cookie-pill-on" aria-hidden="true">Włączone</div>
+        </label>
+
+        <label class="cookie-row">
+          <div>
+            <div class="cookie-cat-title">Analityczne</div>
+            <div class="cookie-cat-desc">Pomagają nam zrozumieć ruch na stronie (np. Google Analytics) — tylko za Twoją zgodą.</div>
+          </div>
+          <input type="checkbox" id="consent-analytics" />
+        </label>
+
+        <label class="cookie-row">
+          <div>
+            <div class="cookie-cat-title">Marketingowe</div>
+            <div class="cookie-cat-desc">Umożliwiają personalizację reklam i pomiar kampanii (np. Meta Pixel) — tylko za Twoją zgodą.</div>
+          </div>
+          <input type="checkbox" id="consent-marketing" />
+        </label>
+      </div>
+
+      <div class="cookie-links">
+        <a href="/polityka-prywatnosci.html" target="_blank" rel="noopener">Polityka prywatności</a>
+        <span aria-hidden="true">•</span>
+        <button type="button" class="cookie-link-btn" id="cookie-open-settings">Zmień ustawienia</button>
+      </div>
+    </div>
+
+    <div class="cookie-actions">
+      <button type="button" class="cookie-btn cookie-btn-ghost" id="cookie-reject">Odrzuć</button>
+      <button type="button" class="cookie-btn cookie-btn-outline" id="cookie-save">Zapisz wybór</button>
+      <button type="button" class="cookie-btn cookie-btn-primary" id="cookie-accept">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Minimalny, elegancki wygląd bez frameworków */
+  #cookie-backdrop{
+    position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 9998;
+  }
+  #cookie-banner{
+    position: fixed;
+    left: 50%; bottom: 18px; transform: translateX(-50%);
+    width: min(920px, calc(100% - 24px));
+    background: #111;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 16px;
+    box-shadow: 0 18px 60px rgba(0,0,0,.45);
+    z-index: 9999;
+    padding: 16px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  .cookie-header{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+    margin-bottom: 10px;
+  }
+  .cookie-title{ font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .cookie-desc{ font-size: 13px; line-height: 1.45; color: rgba(255,255,255,.82); }
+  .cookie-x{
+    background: transparent; border: none; color:#fff; font-size: 22px; line-height: 1;
+    cursor: pointer; padding: 2px 8px; opacity: .8;
+  }
+  .cookie-x:hover{ opacity: 1; }
+  .cookie-body{ margin-top: 10px; }
+  .cookie-cats{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 10px 0 8px;
+  }
+  .cookie-row{
+    display:flex; justify-content:space-between; align-items:center; gap: 12px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+  .cookie-cat-title{ font-weight: 650; font-size: 13px; margin-bottom: 3px; }
+  .cookie-cat-desc{ font-size: 12px; color: rgba(255,255,255,.78); line-height: 1.4; }
+  .cookie-pill{
+    font-size: 12px; padding: 6px 10px; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255,255,255,.08);
+    color: rgba(255,255,255,.9);
+    white-space: nowrap;
+  }
+  .cookie-pill-on{
+    background: rgba(46, 204, 113, .16);
+    border-color: rgba(46, 204, 113, .35);
+  }
+  .cookie-links{
+    display:flex; gap:10px; align-items:center; flex-wrap: wrap;
+    font-size: 12px; margin-top: 6px;
+  }
+  .cookie-links a{ color: rgba(255,255,255,.9); text-decoration: underline; }
+  .cookie-link-btn{
+    background:none; border:none; color: rgba(255,255,255,.9);
+    text-decoration: underline; cursor: pointer; padding: 0;
+  }
+  .cookie-actions{
+    display:flex; gap:10px; justify-content:flex-end; flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .cookie-btn{
+    border-radius: 10px; padding: 10px 12px; font-weight: 650;
+    cursor:pointer; border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.10); color:#fff;
+  }
+  .cookie-btn:hover{ background: rgba(255,255,255,.14); }
+  .cookie-btn-primary{
+    background: #f0c341; color:#111; border-color: rgba(240,195,65,.75);
+  }
+  .cookie-btn-primary:hover{ filter: brightness(1.02); }
+  .cookie-btn-outline{
+    background: transparent; border-color: rgba(240,195,65,.55); color:#fff;
+  }
+  .cookie-btn-ghost{
+    background: transparent; border-color: rgba(255,255,255,.18); color: rgba(255,255,255,.9);
+  }
+
+  /* Mobile: banner jako „kartka” */
+  @media (max-width: 520px){
+    #cookie-banner{ bottom: 12px; padding: 14px; }
+    .cookie-actions{ justify-content: stretch; }
+    .cookie-btn{ flex: 1 1 auto; }
+  }
+</style>
+
+<script>
+  // ---- Cookie consent PRO ----
+  // Zapis w localStorage: { necessary: true, analytics: boolean, marketing: boolean, ts: number }
+  const CONSENT_KEY = "agspa_cookie_consent_v1";
+
+  function getConsent() {
+    try { return JSON.parse(localStorage.getItem(CONSENT_KEY) || "null"); }
+    catch { return null; }
+  }
+
+  function setConsent(consent) {
+    localStorage.setItem(CONSENT_KEY, JSON.stringify({ ...consent, necessary: true, ts: Date.now() }));
+    applyConsent();
+    hideBanner();
+  }
+
+  function showBanner() {
+    const wrap = document.getElementById("cookie-consent");
+    wrap.style.display = "block";
+    // fokus dla dostępności
+    document.getElementById("cookie-accept").focus();
+  }
+
+  function hideBanner() {
+    const wrap = document.getElementById("cookie-consent");
+    wrap.style.display = "none";
+  }
+
+  function applyConsent() {
+    const consent = getConsent();
+
+    // Domyślnie: brak zgody na nie-niezbędne
+    const analyticsOk = !!(consent && consent.analytics);
+    const marketingOk = !!(consent && consent.marketing);
+
+    // Tu w przyszłości podłączysz narzędzia:
+    // - jeśli analyticsOk === true → ładuj Google Analytics
+    // - jeśli marketingOk === true → ładuj Pixel / Ads
+    //
+    // Na dziś (gdy nie masz trackingów) nic nie musimy robić.
+    // Dla porządku zostawiamy event do debugowania:
+    window.dispatchEvent(new CustomEvent("cookieConsentUpdated", {
+      detail: { necessary: true, analytics: analyticsOk, marketing: marketingOk }
+    }));
+  }
+
+  // UI helpers
+  function syncTogglesFromStored() {
+    const consent = getConsent();
+    document.getElementById("consent-analytics").checked = !!(consent && consent.analytics);
+    document.getElementById("consent-marketing").checked = !!(consent && consent.marketing);
+  }
+
+  // Start
+  document.addEventListener("DOMContentLoaded", () => {
+    const stored = getConsent();
+    if (!stored) {
+      // brak decyzji → pokaż banner
+      showBanner();
+      syncTogglesFromStored();
+    } else {
+      // jest decyzja → zastosuj i nie pokazuj
+      applyConsent();
+      hideBanner();
+    }
+
+    // Buttons
+    document.getElementById("cookie-accept").addEventListener("click", () => {
+      setConsent({ analytics: true, marketing: true });
+    });
+
+    document.getElementById("cookie-reject").addEventListener("click", () => {
+      setConsent({ analytics: false, marketing: false });
+    });
+
+    document.getElementById("cookie-save").addEventListener("click", () => {
+      setConsent({
+        analytics: document.getElementById("consent-analytics").checked,
+        marketing: document.getElementById("consent-marketing").checked
+      });
+    });
+
+    document.getElementById("cookie-close").addEventListener("click", () => {
+      // zamknięcie bez zgody traktujemy jak odrzucenie (bezpieczne prawnie)
+      setConsent({ analytics: false, marketing: false });
+    });
+
+    document.getElementById("cookie-open-settings").addEventListener("click", () => {
+      // w tej wersji ustawienia są w samym bannerze (checkboxy),
+      // więc tylko przewijamy fokus na pierwsze ustawienie
+      document.getElementById("consent-analytics").focus();
+    });
+
+    // klik w tło też zamyka jak "odrzuć"
+    document.getElementById("cookie-backdrop").addEventListener("click", () => {
+      setConsent({ analytics: false, marketing: false });
+    });
+  });
+
+  // (Opcjonalnie) funkcja do wywołania np. z linku w stopce:
+  // <button onclick="openCookieSettings()">Ustawienia cookies</button>
+  function openCookieSettings() {
+    showBanner();
+    syncTogglesFromStored();
+  }
+</script>
+</body>
+</html>
